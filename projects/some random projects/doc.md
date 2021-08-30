@@ -3,14 +3,13 @@ layout: default
 title: Random Other Proejcts
 parent: Home
 ---
-# Hellooow
+# Hellooow 👻
 {: .fw-700 }
-Obin Kwon, Nuri Kim\*, Yunho Choi\*, Hwiyeon Yoo\*, Jeongho Park\*, Songhwai Oh
+A, B, C, D, E, F, G
 
-*Equal contribution
 {: .fs-2 }
 
-Damnnnn
+Yoooo 🏃🏃🏃🏃🏃s
 {: .text-green-100 }
 
 [Paper](http://rllab.snu.ac.kr){: .btn  .btn-purple}
