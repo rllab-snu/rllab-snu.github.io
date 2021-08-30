@@ -12,6 +12,6 @@ has_children: true
 Department of Electrical and Computer Engineering, ASRI, Seoul National University 
 
 [Home Page](https://rllab.snu.ac.kr){: .btn  .btn-purple}
-[Youtube](https://rllab.snu.ac.kr){: .btn .btn-blue}
-[Github](https://rllab.snu.ac.kr){: .btn .btn-green}
+[Youtube](https://www.youtube.com/c/RobotLearningLaboratory){: .btn .btn-blue}
+[Github](https://github.com/rllab-snu){: .btn .btn-green}
 
