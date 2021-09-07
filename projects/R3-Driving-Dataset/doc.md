@@ -5,13 +5,13 @@ parent: Home
 ---
 # Towards Defensive Autonomous Driving: Collecting and Probing Driving Demonstrations of Mixed Qualities
 {: .fw-700 }
-Jeongwoo Oh\*, Gunmin Lee\*, Songhwai Oh
+Jeongwoo Oh\1*, Gunmin Lee\1*, Jeongeun Park\2, Wooseok Oh\1, Jaeseok Heo\1, Hojun Chung\3, Do Hyung Kim\4, Byungkyu Park\4, Chang-Gun Lee\4, Sungjoon Choi\2, Songhwai Oh\1
 
 *Equal contribution
 {: .fs-2 }
 
-ICRA 2022 submitted(temp)
-{: .text-green-100 }
+#ICRA 2022 submitted(temp)
+#{: .text-green-100 }
 
 [Paper](http://rllab.snu.ac.kr){: .btn  .btn-purple}
 [Video](https://www.youtube.com/watch?v=Uksb_kR80Hk){: .btn .btn-blue}
