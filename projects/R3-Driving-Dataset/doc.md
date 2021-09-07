@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Towards Defensive Autonomous Driving: Collecting and Probing Driving Demonstrations of Mixed Qualities
+title: "Towards Defensive Autonomous Driving: Collecting and Probing Driving Demonstrations of Mixed Qualities"
 parent: Home
 ---
 # Towards Defensive Autonomous Driving: Collecting and Probing Driving Demonstrations of Mixed Qualities
