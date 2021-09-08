@@ -14,7 +14,7 @@ RLLAB, Seoul National Univ.<sup>1</sup>, RiLAB, Korea Univ. <sup>2</sup>, Depart
 {: .fs-2 }
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/watch?v=Uksb_kR80Hk" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe src="https://www.youtube.com/embed/Uksb_kR80Hk" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
 
 [Paper](http://rllab.snu.ac.kr){: .btn  .btn-purple}
