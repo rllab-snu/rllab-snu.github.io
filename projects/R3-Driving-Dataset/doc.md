@@ -3,8 +3,7 @@ layout: default
 title: "Towards Defensive Autonomous Driving: Collecting and Probing Driving Demonstrations of Mixed Qualities"
 parent: Home
 ---
-# Towards Defensive Autonomous Driving:  
-## Collecting and Probing Driving Demonstrations of Mixed Qualities
+# Towards Defensive Autonomous Driving:  Collecting and Probing Driving Demonstrations of Mixed Qualities
 {: .fw-700 }
 *Jeongwoo Oh*<sup>1</sup>\*, *Gunmin Lee*<sup>1</sup>\*, *Jeongeun Park<sup>2</sup>, Wooseok Oh<sup>1</sup>, Jaeseok Heo<sup>1</sup>, Hojun Chung<sup>3</sup>, Do Hyung Kim<sup>4</sup>, Byungkyu Park<sup>4</sup>, Chang-Gun Lee<sup>4</sup>, Sungjoon Choi<sup>2</sup>, Songhwai Oh<sup>1</sup>*
 
@@ -14,7 +13,7 @@ RLLAB, Seoul National Univ.<sup>1</sup>, RiLAB, Korea Univ. <sup>2</sup>, Depart
 {: .fs-2 }
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/Uksb_kR80Hk" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe width="1080" height="720" src="https://www.youtube.com/embed/Uksb_kR80Hk" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
 
 [Paper](http://rllab.snu.ac.kr){: .btn  .btn-purple}
