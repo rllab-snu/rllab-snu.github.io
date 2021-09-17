@@ -16,7 +16,7 @@ RLLAB, Seoul National Univ.<sup>1</sup>, RiLAB, Korea Univ. <sup>2</sup>, Depart
   <iframe width="1080" height="720" src="https://www.youtube.com/embed/BSajtGNlbnM" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
 
-[Paper](http://rllab.snu.ac.kr){: .btn  .btn-purple}
+[Paper](https://arxiv.org/pdf/2109.07995.pdf){: .btn  .btn-purple}
 [Video](https://www.youtube.com/watch?v=BSajtGNlbnM){: .btn .btn-blue}
 [Dataset](https://github.com/rllab-snu/R3-Driving-Dataset){: .btn .btn-green}
 
