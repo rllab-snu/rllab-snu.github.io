@@ -13,7 +13,7 @@ Obin Kwon, Nuri Kim\*, Yunho Choi\*, Hwiyeon Yoo\*, Jeongho Park\*, Songhwai Oh
 ICCV 2021 accepted
 {: .text-green-100 }
 
-[Paper](http://rllab.snu.ac.kr){: .btn  .btn-purple}
+[Paper](http://rllab.snu.ac.kr/publications/papers/2021_iccv_vgm.pdf){: .btn  .btn-purple}
 [Video](https://www.youtube.com/watch?v=Uksb_kR80Hk){: .btn .btn-blue}
 [Code](https://github.com/rllab-snu/Visual-Graph-Memory){: .btn .btn-green}
 
