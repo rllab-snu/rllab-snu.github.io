@@ -11,7 +11,7 @@ RAL 2022 accepted
 {: .text-green-100 }
 
 <figure class="video_container">
-  <iframe width="1080" height="720" src="https://youtu.be/embed/52Rqxs6682A" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe width="1080" height="720" src="https://youtube.com/embed/52Rqxs6682A" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
 
 [Paper](https://ieeexplore.ieee.org/document/9790354){: .btn  .btn-purple}
