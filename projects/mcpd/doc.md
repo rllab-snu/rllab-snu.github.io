@@ -10,8 +10,8 @@ Jaegoo Choy, Geonho Cha, Songhwai Oh
 RAL 2022 accepted
 {: .text-green-100 }
 
-[Paper](){: .btn  .btn-purple}
-[Video](){: .btn .btn-blue}
+[Paper](https://ieeexplore.ieee.org/document/9790354){: .btn  .btn-purple}
+[Video](https://youtu.be/DD2ephTYcFc){: .btn .btn-blue}
 [Dataset](https://github.com/rllab-snu/KinArt3D-dataset){: .btn .btn-green}
 
 ### Abstract
