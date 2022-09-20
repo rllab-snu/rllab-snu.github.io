@@ -21,5 +21,5 @@ In this paper, we present a topological semantic grph memory (TSGM), which consi
 (1) a graph builder that takes the observed RGB-D image to construct a topological semantic graph, 
 (2) a cross graph mixer module that takes the collected nodes to get contextual information, and 
 (3) a memory decoder that takes the contextual memory as an input to find an action to the target.
-On the task of an image goal navigation, TSGM significantly outperforms competitive baselines by +5.0-9.0% on the success rate and +7.0-23.5\% on SPL, which means that the TSGM finds efficient paths. 
+On the task of an image goal navigation, TSGM significantly outperforms competitive baselines by +5.0-9.0% on the success rate and +7.0-23.5% on SPL, which means that the TSGM finds efficient paths. 
 Additionally, we demonstrate our method on a mobile robot in real-world image goal scenarios.
