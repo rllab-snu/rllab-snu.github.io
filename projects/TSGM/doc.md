@@ -12,7 +12,7 @@ CoRL 2022 accepted
 
 [Paper](https://arxiv.org/pdf/2209.08274.pdf){: .btn  .btn-purple}
 [Video](https://youtu.be/dAnsRLJxGOI){: .btn .btn-blue}
-[Code](https://github.com/rllab-snu/Topological-Semantic-Graph-Memory){: .btn .btn-green}
+[Code](https://github.com/rllab-snu/TopologicalSemanticGraphMemory){: .btn .btn-green}
 
 ### Abstract
 A novel framework is proposed to incrementally collect landmark-based graph memory and use the collected memory for image goal navigation. 
