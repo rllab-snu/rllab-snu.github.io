@@ -8,7 +8,7 @@ title: Your Fancy Project Name
 parent: Home
 ---
 ```
-- Markdown이 웬만한 html을 다룰 수 있어서 doc.md에 들어가는 내용이 꼭 markdown 형식이 아니어도 됩니다. html파일을 md로 파일명만 바꿔도 어느정도 잘 보입니다.
+- Doc이 꼭 markdown 형식이 아니어도 됩니다. doc.md 대신 doc.html을 넣어줘도 잘 보입니다!
 - publish하기 전에 자신이 작성한 내용이 어떻게 보일지 궁금하다면 jekyll을 이용하여 로컬 컴퓨터에서 확인해보실 수 있습니다.
   - https://docs.github.com/ko/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll
 
