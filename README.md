@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/obin-hero/obin-hero.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## 🤔️ How to add new page
+- project 폴더 안에 새로운 폴더를 만들고 "doc.md" 이름의 마크다운 파일을 생성하면 됩니다.
+- doc.md 파일 시작에 다음의 내용을 추가해주세요
 ```
+---
+layout: default
+title: Your Fancy Project Name
+parent: Home
+---
+```
+- Markdown이 웬만한 html을 다룰 수 있어서 doc.md에 들어가는 내용이 꼭 markdown 형식이 아니어도 됩니다. html파일을 md로 파일명만 바꿔도 어느정도 잘 보입니다.
+- publish하기 전에 자신이 작성한 내용이 어떻게 보일지 궁금하다면 jekyll을 이용하여 로컬 컴퓨터에서 확인해보실 수 있습니다.
+  - https://docs.github.com/ko/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## 🙇‍♀️️ Comments
+#### [2023.03.20] Obin
+- 기본 layout이 답답해보여서 조금 손봤습니다. _sass 폴더 안에 있는 내용이니 삭제하지 말아주세요.
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/obin-hero/obin-hero.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
