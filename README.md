@@ -1,4 +1,4 @@
-## 🤔️ How to add new page
+## 🤔️ How to add a new page
 - project 폴더 안에 새로운 폴더를 만들고 "index.md" 이름의 마크다운 파일을 생성하면 됩니다.
   - 파일 이름은 크게 상관이 없는데, 사이트 주소가 깔끔하게 나오려면 index.md가 좋은 것 같습니다. 
 - index.md 파일 시작에 다음의 내용을 추가해주세요
