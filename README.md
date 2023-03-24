@@ -7,8 +7,10 @@
 layout: default
 title: Your Fancy Project Name
 parent: Home
+nav_order: 2208
 ---
 ```
+- nav_order: 저널/학회 발표 년월  (2022년 8월 학회 -> 2208)
 - Doc이 꼭 markdown 형식이 아니어도 됩니다. index.md 대신 index.html을 넣어줘도 잘 보입니다!
 - publish하기 전에 자신이 작성한 내용이 어떻게 보일지 궁금하다면 jekyll을 이용하여 로컬 컴퓨터에서 확인해보실 수 있습니다.
   - https://docs.github.com/ko/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll
