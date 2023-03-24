@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Topological Semantic Graph Memory for Image-Goal Navigation
+nav_order: 2212
 parent: Home
 ---
 # Topological Semantic Graph Memory for Image-Goal Navigation

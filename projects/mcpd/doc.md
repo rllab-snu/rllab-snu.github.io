@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Unsupervised 3D Link Segmentation of Articulated Objects with a Mixture of Coherent Point Drift
+nav_order: 2208
 parent: Home
 ---
 # Unsupervised 3D Link Segmentation of Articulated Objects with a Mixture of Coherent Point Drift

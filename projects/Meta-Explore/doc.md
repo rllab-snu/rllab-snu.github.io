@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Meta-Explore:Exploratory Hierarchical Vision-and-Language Navigation Using Scene Object Spectrum Grounding
+nav_order: 2306
 parent: Home
 ---
 # Meta-Explore: Exploratory Hierarchical Vision-and-Language Navigation Using Scene Object Spectrum Grounding
