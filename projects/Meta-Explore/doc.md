@@ -17,7 +17,7 @@ CVPR 2023 accepted
 {: .text-green-100 }
 
 [Paper](https://arxiv.org/pdf/2303.04077.pdf){: .btn  .btn-purple}
-[Video](https://www.youtube.com/watch?v=6eNwomSCvQk){: .btn .btn-blue}
+[Video](https://www.youtube.com/watch?v=nxWUedX5VpQ&t=3s){: .btn .btn-blue}
 <!-- [Code](){: .btn .btn-green} -->
 
 ### <span style="color:#34568B">Abstract</span>
