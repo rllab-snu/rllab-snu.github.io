@@ -1,0 +1,211 @@
+---
+layout: default
+title: Sequential Preference Ranking for Efficient Reinforcement Learning from Human Feedback
+nav_order: 2306
+parent: Home
+---
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Sequential Preference Ranking for Efficient Reinforcement Learning from Human Feedback">
+  <meta name="keywords" content="Reinforcement Learning from Human Feedback, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sequential Preference Ranking for Efficient Reinforcement Learning from Human Feedback</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id="></script> -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YBLEPL8HN9');
+</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Sequential Preference Ranking for Efficient Reinforcement Learning from Human Feedback</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://minyoung1005.github.io/">Minyoung Hwang</a>,</span>
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/gunmin-lee/gunmin-lee">Gunmin Lee</a>,</span>
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/hogun-kee/hogun-kee">Hogun Kee</a>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/railab/members#h.y40brolczzjt">Chan Woo Kim</a>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/railab/professor">Kyungjae Lee</a>,</span>
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Robot Learning Lab, Seoul Natiaonl University, RAI LAB, Chung-Ang University</span>
+          </div>
+          <div class="is-size-6 publication-venues" style="color: #1ABC9C ">
+            <span><b>NeurIPS 2023</b></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-light">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Comming Soon) </span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href=''
+                   class="external-link button is-normal is-rounded is-light">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100% ">
+        <source src="./static/videos/overview.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Reinforcement learning from human feedback (RLHF) alleviates the problem of designing a task-specific reward function in reinforcement learning by learning it from human preference. 
+            However, existing RLHF models are considered inefficient as they produce only a single preference data from each human feedback. 
+            To tackle this problem, we propose a novel RLHF framework called SeqRank, that uses sequential preference ranking to enhance the feedback efficiency.
+            Our method samples trajectories in a sequential manner by iteratively selecting a defender from the set of previously chosen trajectories K and a challenger from the set of unchosen trajectories U \ K, where U is the replay buffer. 
+            We propose two trajectory comparison methods with different defender sampling strategies: (1) sequential pairwise comparison that selects the most recent trajectory and (2) root pairwise comparison that selects the most preferred trajectory from K.
+            We construct a data structure and rank trajectories by preference to augment additional queries. The proposed method results in at least 39.2% higher average feedback efficiency than the baseline and also achieves a balance between feedback efficiency and data dependency. 
+            We examine the convergence of the empirical risk and the generalization bound of the reward model with Rademacher complexity.
+            While both trajectory comparison methods outperform conventional pairwise comparison, root pairwise comparison improves the average reward in locomotion tasks and the average success rate in manipulation tasks by 29.0% and 25.0%, respectively.
+          </p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/1SF8_6BsA1c"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <!-- <video id="publication-video" controls playsinline height="100%">
+          <source src="./rnr_map/videos/RNR_supplementary_video.mp4"
+                  type="video/mp4">
+        </video> -->
+        
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{Hwang_2023_NeurIPS,
+     author    = {Minyoung Hwang, Gunmin Lee, Hogun Kee, Chan Woo Kim, Kyungjae Lee, Songhwai Oh},
+     title     = {Sequential Preference Ranking for Efficient Reinforcement Learning from Human Feedback},
+     booktitle = {Neural Information Processing Systems Track on Datasets and Benchmarks (NeurIPS)},
+     month     = {December},
+     year      = {2023},
+     pages     = {}
+ }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/2023_CVPR_arXiv.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/obin-hero" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
