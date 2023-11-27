@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Topological Semantic Graph Memory for Image-Goal Navigation
+title: Trust Region-Based Safe Distributional Reinforcement Learning for Multiple Constraints
 nav_order: 2312
 parent: Home
 ---
