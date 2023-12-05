@@ -104,17 +104,6 @@ parent: Home
   </div>
 </section>
 
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100% ">
-        <source src="./static/videos/overview.mp4"
-                type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -124,19 +113,14 @@ parent: Home
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          We propose a novel type of a map for visual navigation, a renderable neural radiance map (RNR-Map), which is designed to contain the overall visual information of a 3D environment. 
-          The RNR-Map has a grid form and consists of latent codes at each pixel. 
-          These latent codes are embedded from image observations, and can be converted to the neural radiance field which enables image rendering given a camera pose. 
-          The recorded latent codes implicitly contain visual information about the environment, which makes the RNR-Map visually descriptive. 
-          This visual information in RNR-Map can be a useful guideline for visual localization and navigation. 
-          We develop localization and navigation frameworks that can effectively utilize the RNR-Map. 
-          </p>
-          <p>
-          We evaluate the proposed frameworks on camera tracking, visual localization, and image-goal navigation. 
-          Experimental results show that the RNR-Map-based localization framework can find the target location based on a single query image with fast speed and competitive accuracy compared to other baselines. 
-          Also, this localization framework is robust to environmental changes, and even finds the most visually similar places when a query image from a different environment is given.  
-          The proposed navigation framework outperforms the existing image-goal navigation methods in difficult scenarios, under odometry and actuation noises. 
-          The navigation framework shows 65.7% success rate in curved scenarios of the NRNS dataset, which is an improvement of 18.6% over the current state-of-the-art. 
+          Addressing decision-making problems using sequence modeling to predict future trajectories shows promising results in recent years.
+          In this paper, we take a step further to leverage the sequence predictive method in wider areas such as long-term planning, vision-based control, and multi-task decision-making.
+          To this end, we propose a method to utilize a diffusion-based generative sequence model to plan a series of milestones in a latent space and to have an agent to follow the milestones to accomplish a given task.
+          The proposed method can learn control-relevant, low-dimensional latent representations of milestones, which makes it possible to efficiently perform long-term planning and vision-based control.
+          Furthermore, our approach exploits generation flexibility of the diffusion model, which makes it possible to plan diverse trajectories for multi-task decision-making.
+          We demonstrate the proposed method across offline reinforcement learning (RL) benchmarks and an visual manipulation environment.
+          The results show that our approach outperforms offline RL methods in solving long-horizon, sparse-reward tasks and multi-task problems,
+          while also achieving the state-of-the-art performance on the most challenging vision-based manipulation benchmark.
           </p>
           </p>
         </div>
@@ -144,269 +128,22 @@ parent: Home
     </div>
     <!--/ Overview. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/1SF8_6BsA1c"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <!-- <video id="publication-video" controls playsinline height="100%">
-          <source src="./rnr_map/videos/RNR_supplementary_video.mp4"
-                  type="video/mp4">
-        </video> -->
-        
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Matting. -->
-    <div class="column is-centered">
-      <h2 class="title is-3">Mapping</h2>
-      <p>
-        The proposed method can encode the observation images into latent codes with fast speed of 91.9Hz.
-        These latent codes are embedded in the grid map according to its position.
-        They can be converted to a neural radiance fields which can render the corresponding region. 
-        We provide some examples of building RNR-Map below.
-      </p>
-      <p>
-
-      </p>
-      <div class="container ">
-        <img src="./static/images/names.png" />
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-
-            <video poster="" id="cantwell" preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Cantwell_0.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="mosquito"  preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Mosquito_1.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="greigsvillew"  preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Greigsville_0.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-steve">
-
-            <video poster="" id="steve"  preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Denmark_0.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="steve"  preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Eudora_0.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="steve"  preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Edgemere_0.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-steve">
-
-            <video poster="" id="steve"  preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Elmira_0.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="steve"  preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Scioto_0.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="steve"  preload='auto' autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/mapping/mapping_Ribera_4.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-
-    <!--/ Matting. -->
-
-    <div class="column is-full-width">
-      <h2 class="title is-3"> Visual Localization </h2>
-      <div class="column is-full-width">
-        <h2 class="title is-4"> Visual Localization using RNR-Map</h2>
-        <p>
-          We can locate places based on an image by directly utilizing the latent codes without rendering images.
-          The visual localization process operates with fast speed (56.8Hz) and high accuracy (99% inliers less than 50cm )
-        </p>
-        <video poster="" id="vl-explain" preload='auto' autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/localization/visual_loc_explain.mp4"
-                  type="video/mp4">
-        </video>
-
-        <div class="container ">
-          <h2 class="title is-5"> Visual Localization Example</h2>
-          <div id="results-vl" class="carousel results-carousel">
-            <div class="item item-steve">
-  
-              <video poster="" id="vl-1" preload='auto' autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/localization/visual_loc_ex1.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve">
-              <video poster="" id="vl-2" preload='auto' autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/localization/visual_loc_ex2.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve">
-              <video poster="" id="vl-4" preload='auto' autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/localization/visual_loc_ex3.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-
-        <video poster="" id="vl-3" preload='auto' autoplay controls muted loop playsinline height="100%">
-          <source src="./static/videos/localization/visual_loc_ex4.mp4"
-                  type="video/mp4">
-        </video>
-
-      </div>
-
-
-      <div class="column is-full-width">
-        <h2 class="title is-5"> Visual Localization with Environment Changes </h2>
-        <p>
-          We observed that visual localization framework with RNR-Map is robust to environment changes. 
-        </p>
-        <columns>
-          <video poster="" id="vl-2" preload='auto' autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/localization/visual_loc_ec.mp4"
-                    type="video/mp4">
-          </video>
-          <video poster="" id="vl-2" preload='auto' autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/localization/visual_loc_ec2.mp4"
-                    type="video/mp4">
-          </video>
-        </columns>
-
-
-      </div>
-
-      <div class="column is-full-width">
-        <h2 class="title is-4"> Camera Tracking using RNR-Map </h2>
-        <p>
-          The renderable property of RNR-Map also enables fine-level pose prediction. 
-        </p>
-      </div>
-        <div class="container ">
-          <div id="results-vl" class="carousel results-carousel">
-            <div class="item item-steve">
-  
-              <video poster="" id="vl-ct" preload='auto' autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/localization/camera_tracking.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve">
-              <video poster="" id="vl-ct2" preload='auto' autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/localization/camera_tracking2.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-
-    </div>
-
-
-    <div class="column is-full-width">
-      <h2 class="title is-3"> Visual Navigation </h2>
-      <div class="column is-full-width">
-        <h2 class="title is-4"> Image Goal Navigation </h2>
-        <p>
-          The visual information in RNR-Map is useful for exploring an environment when finding an image query. 
-        </p>
-        <video poster="" id="img-navi" preload='auto' autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/navigation/image_goal_navi.mp4"
-                  type="video/mp4">
-        </video>
-
-
-        <div class="column ">
-        <h2 class="title is-5"> Agent Behavior</h2>
-        <div id="results-vl" class="carousel results-carousel">
-          <div class="item item-steve">
-  
-            <video poster="" id="vl-ct" preload='auto' autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/navigation/navi_example1.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-steve">
-
-            <video poster="" id="vl-ct" preload='auto' autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/navigation/navi_example2.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-        <span> </span>
-        <div class="column ">
-          <h2 class="title is-5"> Other Navigation Examples </h2>
-          <div id="results-vl" class="carousel results-carousel">
-            <div class="item item-steve">
-  
-              <video poster="" id="vl-ct" preload='auto' autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/navigation/navi_example3.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve">
-  
-              <video poster="" id="vl-ct" preload='auto' autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/navigation/navi_example4.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-steve">
-  
-              <video poster="" id="vl-ct" preload='auto' autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/navigation/navi_example5.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@InProceedings{Kwon_2023_CVPR,
-     author    = {Kwon, Obin and Park, Jeongho and Oh, Songhwai},
-     title     = {Renderable Neural Radiance Map for Visual Navigation},
-     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-     month     = {June},
-     year      = {2023},
-     pages     = {9099-9108}
+    <pre><code>@InProceedings{Hong_2023_NeurIPS,
+     author    = {Hong, Mineui and Kang, Minjae and Oh, Songhwai},
+     title     = {Diffused Task-Agnostic Milestone Planner},
+     booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS)},
+     month     = {December},
+     year      = {2023}
  }</code></pre>
   </div>
 </section>
- -->
+
 
 <footer class="footer">
   <div class="container">
