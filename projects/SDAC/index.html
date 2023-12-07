@@ -1,0 +1,248 @@
+---
+layout: default
+title: Trust Region-Based Safe Distributional Reinforcement Learning for Multiple Constraints
+nav_order: 2312
+parent: Home
+---
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Trust Region-Based Safe Distributional Reinforcement Learning for Multiple Constraints">
+  <meta name="keywords" content="Reinforcement Learning, RL, Safe RL, Constrained RL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trust Region-Based Safe Distributional Reinforcement Learning for Multiple Constraints</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">Trust Region-Based Safe Distributional Reinforcement Learning for Multiple Constraints</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://dobro12.github.io">Dohyeong Kim</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/railab/professor">Kyungjae Lee</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Robot Learning Lab, Seoul National University,</span>
+            <span class="author-block"><sup>2</sup>RAI LAB, Chung-Ang University</span>
+          </div>
+          <div class="is-size-6 publication-venues" style="color: #1ABC9C ">
+            <span><b>NeurIPS 2023</b></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://rllab.snu.ac.kr/publications/papers/2023_neurips_sdac.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/_tnrHL98Rnw?si=JcWj7WoYGGMfNMIC"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/rllab-snu/Safe-Distributional-Actor-Critic"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In safety-critical robotic tasks, potential failures must be reduced, and multiple constraints must be met, such as avoiding collisions, limiting energy consumption, and maintaining balance. 
+            Thus, applying safe reinforcement learning (RL) in such robotic tasks requires to handle multiple constraints and use risk-averse constraints rather than risk-neutral constraints. 
+            To this end, we propose a trust region-based safe RL algorithm for multiple constraints called a <i>safe distributional actor-critic</i> (SDAC). 
+            Our main contributions are as follows: 1) introducing a gradient integration method to manage infeasibility issues in multi-constrained problems, ensuring theoretical convergence, and 2) developing a TD(λ) target distribution to estimate risk-averse constraints with low biases. 
+            We evaluate SDAC through extensive experiments involving multi- and single-constrained robotic tasks. 
+            While maintaining high scores, SDAC shows 1.93 times fewer steps to satisfy all constraints in multi-constrained tasks and 1.78 times fewer constraint violations in single-constrained tasks compared to safe RL baselines. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/_tnrHL98Rnw?si=TcX802J8HSP_lzal" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Experimental Results</h2>
+    <p>
+      We demonstrate the behavior of trained agents in the locomotion tasks where three constraints are considered: 1) keeping body balance, 2) maintaining CoM height, and 3) maintaining foot timing.
+    </p>
+    </br>
+    
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h3 class="title is-4">Quadrupeds</h3>
+          <p>
+            <strong>Forward Command</strong> </br> (left: <i>SDAC</i>, middle: OffTRC, right: WCSAC)
+          </p>
+          <img src="./static/videos/Laikago-forward.gif" alt="Laikago Forward">
+          <p>
+          </p>
+          <p>
+            <strong>Turn-Forward Command</strong> </br> (left: <i>SDAC</i>, middle: OffTRC, right: WCSAC)
+          </p>
+          <img src="./static/videos/Laikago-forward_rotation.gif" alt="Laikago Forward Rotation">
+        </div>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-4">Bipeds</h3>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              <strong>Forward Command</strong> </br> (left: <i>SDAC</i>, middle: OffTRC, right: WCSAC)
+            </p>
+            <img src="./static/videos/Cassie-forward.gif" alt="Cassie Forward">
+            <p>
+            </p>
+            <p>
+              <strong>Turn-Forward Command</strong> </br> (left: <i>SDAC</i>, middle: OffTRC, right: WCSAC)
+            </p>
+            <img src="./static/videos/Cassie-forward_rotation.gif" alt="Cassie Forward Rotation">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Training Curves</h3>
+        <p>
+          <strong>Quadrupeds</strong> </br> (blue: <i>SDAC</i>, orange: OffTRC, green: WCSAC, red: CPO)
+        </p>
+        <img src="./static/images/Laikago.png" alt="Laikago Training Curve">
+        <p>
+          <strong>Bipeds</strong> </br> (blue: <i>SDAC</i>, orange: OffTRC, green: WCSAC, red: CPO)
+        </p>
+        <img src="./static/images/Cassie.png" alt="Cassie Training Curve">
+      </div>
+    </div>  
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+  kim2023sdac,
+  title={Trust Region-Based Safe Distributional Reinforcement Learning for Multiple Constraints},
+  author={Dohyeong Kim and Kyungjae Lee and Songhwai Oh},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023},
+  url={https://openreview.net/forum?id=q9WMXjUxxT}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
