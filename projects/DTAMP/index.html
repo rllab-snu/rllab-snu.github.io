@@ -1,0 +1,142 @@
+---
+layout: default
+title: Diffused Task-Agnostic Milestone Planner
+nav_order: 2312
+parent: Home
+---
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Diffused Task-Agnostic Milestone Planner">
+  <meta name="keywords" content="Planning, Reinforcement Learning, Diffusion Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diffused Task-Agnostic Milestone Planner</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBLEPL8HN9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YBLEPL8HN9');
+</script>
+ -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Diffused Task-Agnostic Milestone Planner</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/mineui-hong/">Mineui Hong</a>,</span>
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/minjae-kang/minjae-kang">Minjae Kang</a>,</span>
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>,
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Robot Learning Lab, Seoul Natiaonl University,</span>
+          </div>
+          <div class="is-size-6 publication-venues" style="color: #1ABC9C ">
+            <span><b>NeurIPS 2023</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Addressing decision-making problems using sequence modeling to predict future trajectories shows promising results in recent years.
+          In this paper, we take a step further to leverage the sequence predictive method in wider areas such as long-term planning, vision-based control, and multi-task decision-making.
+          To this end, we propose a method to utilize a diffusion-based generative sequence model to plan a series of milestones in a latent space and to have an agent to follow the milestones to accomplish a given task.
+          The proposed method can learn control-relevant, low-dimensional latent representations of milestones, which makes it possible to efficiently perform long-term planning and vision-based control.
+          Furthermore, our approach exploits generation flexibility of the diffusion model, which makes it possible to plan diverse trajectories for multi-task decision-making.
+          We demonstrate the proposed method across offline reinforcement learning (RL) benchmarks and an visual manipulation environment.
+          The results show that our approach outperforms offline RL methods in solving long-horizon, sparse-reward tasks and multi-task problems,
+          while also achieving the state-of-the-art performance on the most challenging vision-based manipulation benchmark.
+          </p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{Hong_2023_NeurIPS,
+     author    = {Hong, Mineui and Kang, Minjae and Oh, Songhwai},
+     title     = {Diffused Task-Agnostic Milestone Planner},
+     booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS)},
+     month     = {December},
+     year      = {2023}
+ }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/2023_CVPR_arXiv.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/obin-hero" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

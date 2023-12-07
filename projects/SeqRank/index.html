@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sequential Preference Ranking for Efficient Reinforcement Learning from Human Feedback
-nav_order: 2306
+nav_order: 2309
 parent: Home
 ---
 
@@ -42,6 +42,28 @@ parent: Home
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    /* Define a CSS class for your section with a specific background color */
+    .colored-section {
+      background-color: #F8F8F8; /* Replace with your desired color code or name */
+      padding: 20px; /* Optional: Add padding for better spacing */
+    }
+
+    .colored-section2 {
+      background-color: #f3ebde; /* Replace with your desired color code or name */
+      padding: 20px; /* Optional: Add padding for better spacing */
+    }
+
+    .colored-section3 {
+      background-color: #f0eeee; /* Replace with your desired color code or name */
+      padding: 20px; /* Optional: Add padding for better spacing */
+    }
+
+    ol {
+      margin-left: 50px; /* Adjust the value to control the tab size */
+    }
+  </style>
 </head>
 <body>
 
@@ -54,36 +76,37 @@ parent: Home
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://minyoung1005.github.io/">Minyoung Hwang</a>,</span>
+              <a href="https://minyoung1005.github.io/">Minyoung Hwang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://rllab.snu.ac.kr/people/gunmin-lee/gunmin-lee">Gunmin Lee</a>,</span>
+              <a href="https://rllab.snu.ac.kr/people/gunmin-lee/gunmin-lee">Gunmin Lee</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://rllab.snu.ac.kr/people/hogun-kee/hogun-kee">Hogun Kee</a>,</span>
+              <a href="https://rllab.snu.ac.kr/people/hogun-kee/hogun-kee">Hogun Kee</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://sites.google.com/view/railab/members#h.y40brolczzjt">Chan Woo Kim</a>,</span>
+              <a href="https://sites.google.com/view/railab/members#h.y40brolczzjt">Chan Woo Kim</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://sites.google.com/view/railab/professor">Kyungjae Lee</a>,</span>
+              <a href="https://sites.google.com/view/railab/professor">Kyungjae Lee</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>,
+              <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Robot Learning Lab, Seoul National University, RAI LAB, Chung-Ang University</span>
+            <span class="author-block"><sup>1</sup>Robot Learning Lab, Seoul National University, <sup>2</sup>RAI LAB, Chung-Ang University</span>
           </div>
           <div class="is-size-6 publication-venues" style="color: #1ABC9C ">
             <span><b>NeurIPS 2023</b></span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-light">
+              <span class="link-block">
+                <a href="https://openreview.net/pdf?id=MIYBTjCVjR"
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (Comming Soon) </span>
+                  <span>Paper</span>
                 </a>
-              </span> -->
+              </span>
               <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
@@ -93,15 +116,15 @@ parent: Home
                   <span>arXiv</span>
                 </a>
               </span> -->
-              <!-- <span class="link-block">
+              <span class="link-block">
                 <a href=''
                    class="external-link button is-normal is-rounded is-light">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon) </span>
                 </a>
-              </span> -->
+              </span>
             </div>
           </div>
         </div>
@@ -113,16 +136,14 @@ parent: Home
 <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100% ">
-        <source src="./static/videos/overview.mp4"
-                type="video/mp4">
-      </video>
+      <img src="static/images/overview_label.png" class="interpolation-image" width="800" alt="Interpolate start reference image." />
+
     </div>
   </div>
 </section> -->
 
 
-<section class="section">
+<section class="colored-section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -165,6 +186,349 @@ parent: Home
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Matting. -->
+    <div class="column is-centered">
+      <h2 class="title is-3">Reinforcement Learning from Human Feedback (RLHF)</h2>
+      
+      <p>
+        Reinforcement learning from human feedback (RLHF) directly learns from human preferences without the need for a hand-crafted reward function.
+      </p>
+      <br><br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/images/overview_rlhf_only.png" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 60%;" />
+      </div>
+      <br>
+      <br>
+
+      <p>
+        A conventional way to learn a reward function in RLHF is pairwise comparison.
+      </p>
+      <br><br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/images/overview_2.png" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 80%;" />
+      </div>
+      <br>
+
+      <p>
+        Using pairwise comparison, the agent queries a human to compare two different trajectories.
+        The feedback efficiency is also fixed as a standardized level, 1.
+      </p>
+      <br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/pairwise_comparison.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 100%;" />
+      </div>
+      <br>
+
+    </div>
+
+    <div class="column is-centered">
+      <h2 class="title is-3">SeqRank</h2>
+
+      <p>
+        We propose a novel RLHF framework called SeqRank.
+        Our method uses sequential preference ranking to enhance the feedback efficiency and reduce human’s labeling effort.
+      </p>
+      <br><br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/images/transitivity.png" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 70%;" />
+      </div>
+      <br>
+      <br>
+
+      <p>
+        The key idea of our approach is to utilize the preference relationships of the previous trajectory pairs.
+        Bringing the nature of transitivity in human preferences, we can augment preference data.
+      </p>
+      <br><br>
+
+      <p>
+        Our method samples trajectories in a sequential manner by iteratively selecting
+        a defender from the set of previously chosen trajectories K and
+        a challenger from the set of unchosen trajectories U \ K.
+        Specifically, we propose two trajectory comparison methods with different defender sampling strategies:
+        <ol>
+          <li>Sequential Pairwise Comparison:
+            defender = most recently sampled trajectory</li>
+          <li> Root Pairwise Comparison:
+            defender = previously most preferred trajectory</li>
+        </ol>
+        <!-- (1) Sequential Pairwise Comparison
+        defender = most recently sampled trajectory
+        (2) Root Pairwise Comparison
+        defender = previously most preferred trajectory -->
+      </p>
+      <br>
+      <br>
+
+      <h3 class="title is-4 ">Sequential Pairwise Comparison</h3>
+      <p>
+        Sequential pairwise comparison selects the most recently sampled trajectory as the defender.
+      </p>
+      <br><br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/sequential_pairwise_comparison.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 100%;" />
+      </div>
+
+      <h3 class="title is-4 ">Root Pairwise Comparison</h3>
+      <p>
+        Root pairwise comparison selects the previously most preferred trajectory as the defender.
+      </p>
+      <br><br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/root_pairwise_comparison.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 100%;" />
+      </div>
+      <br>
+      
+      <p>
+        Both sequential and root pairwise comparison can augment additional preference data due to transitivity.
+      </p>
+      <br><br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/images/trajectory_comparison_methods_medium.png" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 80%;" />
+      </div>
+
+      <h3 class="title is-4 ">Toy Example</h3>
+      <p>
+        Suppose the reward values for segments σ_1, σ_2, …, σ_10 are 2, 5, 1, 8, 6, 4, 3, 7, 9, 10, respectively.
+        Then, we can construct a graph for each trajectory comparison method.
+      </p>
+      <br><br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/images/toy_example.png" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 80%;" />
+      </div>
+      <br>
+      <p>
+        Black lines indicate actual pairs that receive true preference labels from human feedback.
+        Purple lines describe augmented labels for non-adjacent pairs.
+      </p>
+      <br><br>
+
+      <h3 class="title is-3 ">Theoretical Analyses</h3>
+      <p>
+        We prove that sequential and root pairwise comparison show 39.2% and 100% higher average feedback efficiency compared to conventional pairwise comparison.
+      <br><br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/images/table-1.png" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 80%;" />
+      </div>
+      <br>
+
+      <h3 class="title is-4 ">Trade-Off between Feedback Efficiency and Data Dependency</h3>
+      <p>
+        blahblah
+      </p>
+      <br><br>
+
+    </div>
+
+    <div class="column is-centered">
+      <h2 class="title is-3">Results</h2>
+      <h3 class="title is-4 ">Simulation Experiments</h3>
+      
+      <p>
+        We show that the overall performance in DMControl is in the order of root, sequential, and pairwise comparison.
+      </p>
+      <br><br>
+
+      <h3 class="title is-5 ">DMControl - Quadruped Walk</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/quadruped.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <p>
+        In the example trajectories in the quadruped walk task,
+        the agent trained using pairwise comparison fails to turn its body upside down.
+      </p>
+      <br><br>
+
+      <h3 class="title is-5 ">DMControl - Walker Walk</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/walker.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <p>
+        In the example trajectories in the walker walk task,
+        the agent trained using root pairwise comparison shows the fastest and most stable gait.
+      </p>
+      <br><br>
+
+      <h3 class="title is-5 ">MetaWorld - Drawer Open - Scenario I</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/drawer_open_1.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <p>
+        In the first scenario in the drawer open task,
+        the agent trained using pairwise comparison fails to open the drawer.
+      </p>
+      <br><br>
+
+      <h3 class="title is-5 ">MetaWorld - Drawer Open - Scenario II</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/drawer_open_2.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <p>
+        In the second scenario in the drawer open task,
+        all agents open the drawer, but the agents trained using pairwise and sequential pairwise comparison are unstable because their end effectors oscillate with a large and small amplitude, respectively.
+      </p>
+      <br><br>
+
+      <h3 class="title is-5 ">MetaWorld - Window Open</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/window_open.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <p>
+        In the example trajectories in the window open task,
+        only the agent trained using root pairwise comparison succeeds in opening the window.
+      </p>
+      <br><br>
+
+      <h3 class="title is-5 ">MetaWorld - Hammer</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/hammer.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <p>
+        In the example trajectories in the hammer task,
+        agents trained using sequential and root pairwise comparison succeed in driving a nail into the wooden box.
+      </p>
+      <br><br>
+
+      <h3 class="title is-4 ">Real Human Feedback Experiments</h3>
+      <!-- <h3 class="title is-5 ">DMControl - Cheetah Run</h3> -->
+      <p>
+        We conduct experiments with real human feedback to compare the user stress level for each method.
+Each participant trained a cheetah to run as fast as it can.
+      </p>
+      <br>
+
+      <h3 class="title is-5 ">Pairwise Comparison (Baseline)</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/pairwise_real_human.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <!-- <p>
+        Pairwise Comparison (Baseline)
+      </p> -->
+      <br><br>
+
+      <h3 class="title is-5 ">Sequential Pairwise Comparison (Ours)</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/sequential_real_human.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <!-- <p>
+        Sequential Pairwise Comparison (Ours)
+      </p> -->
+      <br><br>
+
+      <h3 class="title is-5 ">Root Pairwise Comparison (Ours)</h3>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/root_real_human.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <!-- <p>
+        Root Pairwise Comparison (Ours)
+      </p> -->
+      <br><br>
+
+      <!-- <p>
+        Root pairwise comparison is the least burdensome for real human users while achieving the highest performance.
+      </p> -->
+      <h3 class="title is-5 ">Root pairwise comparison is the least burdensome for real human users while achieving the highest performance.</h3>
+
+      <p>
+        After the experiments end, the participants took a survey.
+        Participants responed that the user satisfaction scores are 2.20 (pairwise), 3.00 (sequential), and 3.93 (root).
+        The most significant preference criterion was the overall moved distance of the agent.
+      </p>
+      <br>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/images/real_human_feedback_plot.png" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <br><br>
+
+      <h3 class="title is-4 ">Real Robot Experiments - Block Placing</h3>
+      <p>
+        To demonstrate our method in real-world environments, we conduct a block placing task using a real UR-5 robot.
+      </p>
+
+      <div class="columns is-vcentered is-centered">
+        <br>
+        <img src="static/videos/real_block_placing.gif" class="interpolation-image" alt="Interpolate start reference image."
+         style="width: 90%;" />
+      </div>
+
+      <!-- <p>
+        To demonstrate our method in real-world environments, we conduct a block placing task using a real UR-5 robot.
+      </p> -->
+      <br><br>
+
+    </div>
+
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
