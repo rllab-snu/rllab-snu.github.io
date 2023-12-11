@@ -131,7 +131,7 @@ parent: Home
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Overview</h2>
-    <img src="/static/images/overview.PNG">
+    <img src="./static/images/overview.PNG">
     <p>
       We propose a method named Diffused Task-Agnostic Milestone Planner (DTAMP), which predicts milestones in a latent space using a diffusion model, 
       to guide an agent to reach a given goal by following them.
@@ -199,7 +199,9 @@ parent: Home
           <h3 class="title is-4">CALVIN benchmark</h3>
           <img src="./static/images/calvin_result.PNG">
           <p>
-            DTAMP outperforms the other baselines and achieves state-of-the-art performance on the CALVIN benchmark tasks.
+            DTAMP outperforms the other baselines and achieves state-of-the-art performance on the CALVIN benchmark tasks.<br>
+            <b>Number of tasks</b> represents the number of tasks implied by a single goal image, 
+            and <b>DTAMP+Replanning</b> represents a variant of DTAMP that allows the agent to replan the milestones during an episode.
           </p>
         </div>
       </div>
