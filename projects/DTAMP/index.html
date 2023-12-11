@@ -183,24 +183,27 @@ parent: Home
     <div class="columns is-centered">
       <div class="column">
         <div class="content">
-          <h3 class="title is-4">Antmaze</h3>
-          <img src="./static/images/antmaze_return.PNG">
-        </div>
-      </div>
-      <div class="column">
-        <h3 class="title is-4">Kitchen</h3>
-        <div class="columns is-centered">
-          <div class="column content">
-            <img src="./static/images/kitchen_return.PNG">
-          </div>
+          <h3 class="title is-4">Averaged score / inference time comparison</h3>
+          <img src="./static/images/time_return.PNG">
+          <p>
+            The figures compare DTAMP to the other baselines in the terms of inference time and averaged score.
+            DTAMP shows the highest averaged score & 300~1,000 times faster inference time compared to the other sequence modeling methods
+            (TT: Trajectory Transformer, DD: Decision Diffuser).
+          </p>
         </div>
       </div>
     </div>
-    <p>
-      The figure compares DTAMP to the other baselines in the terms of inference time and averaged score.
-      DTAMP shows the highest averaged score & 300~1,000 times faster inference time compared to the other sequence modeling methods
-      (TT: Trajectory Transformer, DD: Decision Diffuser).
-    </p>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h3 class="title is-4">CALVIN benchmark</h3>
+          <img src="./static/images/calvin_result.PNG">
+          <p>
+            DTAMP outperforms the other baselines and achieves state-of-the-art performance on the CALVIN benchmark tasks.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
