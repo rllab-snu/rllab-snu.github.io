@@ -1,0 +1,35 @@
+
+<!--<script>-->
+<!--function w3_open() {-->
+<!--  document.getElementById("sidebar").style.display = "flex";-->
+<!--}-->
+<!--function w3_close() {-->
+<!--  document.getElementById("sidebar").style.display = "none";-->
+<!--}-->
+<!--</script>-->
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="side-bar" id="sidebar">
+<!--  <button class="sidebar-button" id="sidebar-button"-->
+<!--  onclick="w3_close()">Close &times;</button>-->
+  <div class="site-header" role="banner">
+    <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  {% include_cached components/site_nav.html %}
+
+  {% capture nav_footer_custom %}
+    {%- include nav_footer_custom.html -%}
+  {% endcapture %}
+  {% if nav_footer_custom != "" %}
+    {{ nav_footer_custom }}
+  {% else %}
+    <footer class="site-footer">
+      Thsssis site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  {% endif %}
+</div>
+<!--<button class="sidebar-button" id='open-button' style="font-size: 32px" onclick="w3_open()">&#9776;</button>-->
