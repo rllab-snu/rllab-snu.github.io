@@ -1,0 +1,312 @@
+---
+layout: default
+title: "🐳️ WayIL: Image-based Indoor Localization with Wayfinding Maps"
+nav_order: 2405
+parent: Home
+---
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="WayIL: Image-based Indoor Localization with Wayfinding Maps">
+  <meta name="keywords" content="Visual Navigation, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WayIL: Image-based Indoor Localization with Wayfinding Maps</title>
+
+<!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBLEPL8HN9"></script>-->
+<!--<script>-->
+<!--  window.dataLayer = window.dataLayer || [];-->
+<!--  function gtag(){dataLayer.push(arguments);}-->
+<!--  gtag('js', new Date());-->
+
+<!--  gtag('config', 'G-YBLEPL8HN9');-->
+<!--</script>-->
+
+<!--  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">-->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">🐳 WayIL: Image-based Indoor Localization  with Wayfinding Maps</h1>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://obin-hero.github.io/">Obin Kwon</a><sup>1,2</sup>,</span>
+            <span class="author-block"> <a> Dongki Jung </a> <sup>1</sup>,</span>
+            <span class="author-block"> <a> Youngji Kim </a> <sup>1</sup>,</span>
+            <span class="author-block"> <a> Soohyun Ryu </a> <sup>1</sup>,</span>
+            <span class="author-block"> <a> Suyong Yeon </a> <sup>1</sup>,</span>
+            <br>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a><sup>2</sup>,</span>
+            <span class="author-block"> <a> Donghwan Lee </a><sup>1</sup></span>
+          </div>
+          <div class="is-size-5 publication-venue">
+            <span class="publication-venue"><sup>1</sup> <a href="https://www.naverlabs.com" style="color:black">NAVER LABS,</a> </span>
+            <span class="publication-venue"><sup>2</sup> <a href="https://rllab.snu.ac.kr" style="color:black">RLLAB, Seoul National University</a></span>
+            <br>
+            <span style="font-size:12pt">*Work done during the first author's internship at NAVER LABS.</span>
+
+          </div>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-6 publication-venues">
+            <span style="font-size:15pt;color: #1ABC9C "><b>ICRA 2024</b></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" href="https://rllab.snu.ac.kr/publications/papers/2024_icra_wayil.pdf">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper </span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" href="https://www.youtube.com/watch?v=xsjDhIMepeQ">
+                  <span class="icon">
+                      <i class="fas fa-video"></i>
+                  </span>
+                  <span>Video </span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100% ">
+        <source src="./static/videos/wayil_teaser.mp4"   type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<div class="container is-max-desktop">
+  <div class='id-centered has-text-centered is-four-fifths'>
+    <section class="section" id="abstract">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+        This paper tackles a localization problem in large-scale indoor environments with wayfinding maps.
+        A wayfinding map abstractly portrays the environment, and humans can localize themselves based on the map.
+        However, when it comes to using it for robot localization, large geometrical discrepancies between the wayfinding map and the real world make it hard to use conventional localization methods.
+        Our objective is to estimate a robot pose within a wayfinding map, utilizing RGB images from perspective cameras.
+        </p>
+        <p>
+        We introduce two different imagination modules which are inspired by how humans can comprehend and interpret their surroundings for localization purposes.
+        These modules jointly learn how to effectively observe the first-person-view (FPV) world to interpret bird-eye-view (BEV) maps.
+        Providing explicit guidance to the two imagination modules significantly improves the precision of the localization system.
+        We demonstrate the effectiveness of the proposed approach using real-world datasets, which are collected from various large-scale crowded indoor environments.
+        The experimental results show that, in 85% of scenarios, the proposed localization system can estimate its pose within 3m in large indoor spaces.
+        </p>
+      </div>
+    </section>
+    <section class="section" id="Problem">
+      <h2 class="title is-3">Problem</h2>
+
+      <h4 class="title is-5"> Localization in large-scale indoor environments with wayfinding maps. </h4>
+            <video poster="" id="cantwell" preload='auto' autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/problem.mp4"
+                      type="video/mp4">
+            </video>
+      <br><br>
+      <h4 class="title is-6">  Wayfinding Map? : An illustrated map we can find in large spaces, such as shopping mall, department store </h4>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      Since the primary purpose of a wayfinding map is to convey information rather than accurately represent the environment, it often highlights specific areas in detail and simplifies less significant regions.
+      Furthermore, while extra information like GPS or satellite image is possible in outdoor environments, it can be difficult to use such information indoors.
+      However, humans can still locate themselves on a wayfinding map without expensive sensors or precise maps.
+      This paper aims to develop a localization system inspired by these human capabilities.
+      </p>
+<!--      <img src="static/videos/m2.svg" style="width:10em">-->
+<!--      We consider a robot navigating around the environment, which has three cameras.-->
+    </section>
+    <section class="section" id="method">
+      <h2 class="title is-3">Method</h2>
+      <br><br>
+      <h4 class="title is-4">FPV-to-BEV</h4>
+
+      <img src="./static/videos/reprojection_bev.svg"></img>
+      <br><br>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+       The proposed localization system starts from building informative Bird-Eye-View representation from First-Persion View informaiton.
+       We calculate 3D position of each pixels using estimated depth information. We used Omnidata <a href="#footnote-omnidata">[1]</a> for depth estimation.
+       Inspired by [2], we estimate the floor area using the estimated surface normal, and adjusted the depth scale so that the height of the floor matches the known camera height.
+      </p>
+      <br><br>
+      <p id="footnote-omnidata" style="font-size: small">[1] Eftekhar, Ainaz, et al. "Omnidata: A scalable pipeline for making multi-task mid-level vision datasets from 3d scans." ICCV. 2021.</p>
+      <p id="footnote-depth-scale" style="font-size: small">[2] Xue, Feng, et al. "Toward hierarchical self-supervised monocular absolute depth estimation for autonomous driving applications." IROS. IEEE, 2020.</p>
+      <br><br>
+      <h4 class="title is-4">Cross-correlation based Localization</h4>
+      <video poster="" id="cantwell" preload='auto' autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/cross-correlation.mp4" type="video/mp4">
+      </video>
+
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      The proposed localization system based on cross-correlation operation, inspired by  <a href="#footnote-mapnet">[3]</a>, <a href="#footnote-orienternet">[4]</a>, <a href="#footnote-rnr-map">[5]</a>.
+      The developed egocentric BEV representation is compared with the wayfinding map by cross-correlation operation (or convolution) with rotating it.
+      </p>
+
+      <br><br>
+      <p id="footnote-mapnet" style="font-size: small">[3] Henriques, et al. "Mapnet: An allocentric spatial memory for mapping environments." CVPR. 2018.</p>
+      <p id="footnote-orienternet" style="font-size: small">[4] Sarlin, Paul-Edouard, et al. "Orienternet: Visual localization in 2d public maps with neural matching." CVPR. 2023.</p>
+      <p id="footnote-rnr-map" style="font-size: small">[5] Kwon, Obin, et al. "Renderable neural radiance map for visual navigation." CVPR. 2023.</p>
+      <br><br>
+
+
+      <h4 class="title is-4">Imagination Modules</h4>
+      <img src="./static/videos/imagine_modules.svg">
+      <br><br>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      We hypothesized that this localization approach entails the robot gradually learning where to look for localization and gaining insight into how the observed area would be represented on the BEV map.
+      Moreover, we believe that having this comprehension is an important factor that allows localization from two different viewpoints.
+      <br>
+      First, we designed a FPV-Imagine module which can stimulate the understanding from FPV image. This module imagines in a first-person-view (FPV), how the wayfinding map would
+appear in current RGB images. It learns which part of the FPV image would be drawn on the BEV map and which would not.
+      <br>
+      Second, we designed a BEV-Imagine module which advances the understanding of BEV representation. This module imagines how the wayfinding map would appear in current RGB images.
+      Imagine-BEV module imagines in a bird-eye-view (BEV) how the current surroundings would be drawn as a wayfinding map.
+      </p>
+
+      <br><br>
+      <h4 class="title is-4">Particle Filter</h4>
+      <video poster="" id="cantwell" preload='auto' autoplay muted loop playsinline height="80%" width="80%">
+              <source src="./static/videos/particle_filter.mp4" type="video/mp4">
+      </video>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      This paper focuses on large-scale indoor environments, which frequently have repetitive patterns and numerous dynamic obstacles.
+      Maps for such environments might not always be accurate, leading the localization system to occasionally select an incorrect location that looks similar to the answer.
+      To address this issue, we integrated the particle filter algorithm with the WayIL system to combine information over time and improve estimation.
+      </p>
+
+
+      <br><br>
+    </section>
+    <section class="section" id="experiments">
+      <h4 class="title is-4">Experiments</h4>
+      <div class="column" >
+        <div id="results-vl" class="carousel results-carousel">
+          <div class="card">
+            <video poster="" id="vl-1" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/example_1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="card">
+            <video poster="" id="vl-2" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/example_2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="card">
+            <video poster="" id="vl-3" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/example_3.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="card">
+            <video poster="" id="vl-4" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/example_4.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+                    <div class="card">
+            <video poster="" id="vl-5" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/example_5.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+                    <div class="card">
+            <video poster="" id="vl-6" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/example_6.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+                    <div class="card">
+            <video poster="" id="vl-7" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/example_7.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="experiments-real">
+      <h4 class="title is-4">Experiments on Real Wayfinding Map</h4>
+      <div id="results-real" class="carousel results-carousel">
+          <div class="card">
+            <video poster="" id="rvl-1" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/real1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="card">
+            <video poster="" id="rvl-2" preload='auto' autoplay muted loop playsinline>
+              <source src="./static/videos/real2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>
+
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@InProceedings{Kwon_2023_CVPR,-->
+<!--     author    = {Kwon, Obin and Park, Jeongho and Oh, Songhwai},-->
+<!--     title     = {Renderable Neural Radiance Map for Visual Navigation},-->
+<!--     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},-->
+<!--     month     = {June},-->
+<!--     year      = {2023},-->
+<!--     pages     = {9099-9108}-->
+<!-- }</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
