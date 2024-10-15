@@ -1,0 +1,233 @@
+---
+layout: default
+title: "Adversarial Environment Design via Regret-Guided Diffusion Models"
+nav_order: 2412
+parent: Home
+---
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Adversarial Environment Design via Regret-Guided Diffusion Models">
+  <meta name="keywords" content="Unsupervised Environment Design, Curriculum Reinforcement Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adversarial Environment Design via Regret-Guided Diffusion Models</title>
+
+<!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBLEPL8HN9"></script>-->
+<!--<script>-->
+<!--  window.dataLayer = window.dataLayer || [];-->
+<!--  function gtag(){dataLayer.push(arguments);}-->
+<!--  gtag('js', new Date());-->
+
+<!--  gtag('config', 'G-YBLEPL8HN9');-->
+<!--</script>-->
+
+<!--  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">-->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Adversarial Environment Design via Regret-Guided Diffusion Models</h1>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://hojunian.github.io/">Hojun Chung</a><sup>1,2</sup>,</span>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/junseo-lee/junseo-lee"> Junseo Lee </a> <sup>1</sup>,</span>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/minsoo-kim/minsoo-kim"> Minsoo Kim </a> <sup>1</sup>,</span>
+            <span class="author-block"> <a href="https://dobro12.github.io/"> Dohyeong Kim </a> <sup>1</sup>,</span>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/songhwai-oh"> Songhwai Oh </a> <sup>1</sup>,</span>
+            <br>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a><sup>2</sup>,</span>
+            <span class="author-block"> <a> Donghwan Lee </a><sup>1</sup></span>
+          </div>
+          <div class="is-size-5 publication-venue">
+            <span class="publication-venue"> <a href="https://rllab.snu.ac.kr" style="color:black">RLLAB, Seoul National University</a></span>
+          </div>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-6 publication-venues">
+            <span style="font-size:15pt;color: #1ABC9C "><b>NeurIPS 2024</b></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-light" href=''>
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon) </span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-light" href=''>
+                  <span class="icon">
+                      <i class="fas fa-video"></i>
+                  </span>
+                  <span>Video (Coming Soon) </span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href='https://github.com/rllab-snu/ADD'
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code </span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <iframe src='https://youtube.com/embed/TYgcrZxDSrQ' frameborder='0' allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container is-max-desktop">
+  <div class='id-centered has-text-centered is-four-fifths'>
+    <section class="section" id="abstract">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+        Training agents that are robust to environmental changes remains a significant challenge in deep reinforcement learning (RL). 
+        Unsupervised environment design (UED) has recently emerged to address this issue by generating a set of training environments tailored to the agent's capabilities. 
+        While prior works demonstrate that UED has the potential to learn a robust policy, their performance is constrained by the capabilities of the environment generation. 
+        To this end, we propose a novel UED algorithm, adversarial environment design via regret-guided diffusion models (ADD). 
+        The proposed method guides the diffusion-based environment generator with the regret of the agent to produce environments that the agent finds challenging but conducive to further improvement. 
+        By exploiting the representation power of diffusion models, ADD can directly generate adversarial environments while maintaining the diversity of training environments, enabling the agent to effectively learn a robust policy. 
+        Our experimental results demonstrate that the proposed method successfully generates an instructive curriculum of environments, outperforming UED baselines in zero-shot generalization across novel, out-of-distribution environments.
+        </p>
+      </div>
+    </section>
+    <section class="section" id="Overview">
+      <h2 class="title is-3">Overview</h2>
+      <img src="./static/images/overview.png"></img>
+      <br><br>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      First, a diffusion-based environment generator, which is pre-trained on the randomly generated environment dataset, produces a set of environments for the agent. 
+      After the agent interacts with the generated environments and is trained via reinforcement learning, the episodic results are utilized to update the environment critic. 
+      Then, the environment critic estimates the regret of the agent in a differentiable form and guides the reverse process of the diffusion-based environment generator, resulting in environment parameters that the agent finds challenging but conducive to further improvement. 
+      By repeating this process, the agent learns the policy, which is robust to the variations of environments.
+      </p>
+<!--      <img src="static/videos/m2.svg" style="width:10em">-->
+<!--      We consider a robot navigating around the environment, which has three cameras.-->
+    </section>
+    <section class="section" id="Experiments">
+      <h2 class="title is-3">Experiments</h2>
+      <br><br>
+      <h3 class="title is-4">Minigrid Test Environments</h3>
+      <img src="./static/images/maze_test_env.png"></img>
+      <br><br>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      We train the diffusion-based environment generator on 10M random environments whose number of blocks uniformly varies from zero to 60. 
+      Then, we train the LSTM-based policy for 250M environmental steps and evaluate the zero-shot performance on 12 challenging test environments from prior works [1, 2].
+      </p>
+      <br><br>
+      <p id="footnote-omnidata" style="font-size: small">[1] Dennis et. al. "Emergent complexity and zero-shot transfer via unsupervised environment design," NeurIPS, 2020.</p>
+      <p id="footnote-depth-scale" style="font-size: small">[2] Jiang et. al. "Replay-guided adversarial environment design," NeruIPS, 2021.</p>
+      <br><br>
+      <h3 class="title is-4">Minigrid Results</h3>
+      <img src="./static/images/maze_result.png"></img>
+      <br><br>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      The proposed method consistently outperforms the baselines in the challenging test environments.
+      It also successfully generates adversarial environments while preserving diversity.
+      </p>
+      <br><br>
+      <h3 class="title is-4">Minigrid Controllable Generation</h3>
+      <img src="./static/images/maze_controllable.png"></img>
+      <br><br>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      ADD allows us to control the difficulty levels of the environments it generates by guiding the generator with the probability of achieving a specific return. 
+      It enables the reuse of the learned generator in various applications, such as generating benchmarks.
+      </p>
+      <br><br>
+      <h3 class="title is-4">BipedalWalker Test Environments</h3>
+      <img src="./static/images/bipedal_test_env.png"></img>
+      <br><br>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      We train the RL agent for two billion environmental steps and evaluate the zero-shot performance on six test environments from prior work [3].
+      </p>
+      <br><br>
+      <p id="footnote-omnidata" style="font-size: small">[3] Parker-Holder et. al. "Evolving curricula with regret-based environment design," ICML, 2022.</p>
+      <br><br>
+      <h3 class="title is-4">BipedalWalker Results</h3>
+      <img src="./static/images/bipedal_result.png"></img>
+      <br><br>
+      <p style="font-size:1rem;font-weight:600;text-align: justify">
+      The proposed algorithm achieves the highest return across all environments, with an average of 149.6.
+      Furthermore, we can infer that the proposed algorithm generates environments that are not merely more difficult but are conducive to the agent's learning process.
+      </p>
+      <br><br>
+      <h3 class="title is-4">BipedalWalker Controllable Generation</h3>
+      <img src="./static/images/bipedal_controllable.png"></img>
+      <br><br>
+
+    </section>
+  </div>
+</div>
+
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@InProceedings{Kwon_2023_CVPR,-->
+<!--     author    = {Kwon, Obin and Park, Jeongho and Oh, Songhwai},-->
+<!--     title     = {Renderable Neural Radiance Map for Visual Navigation},-->
+<!--     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},-->
+<!--     month     = {June},-->
+<!--     year      = {2023},-->
+<!--     pages     = {9099-9108}-->
+<!-- }</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
