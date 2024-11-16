@@ -1,0 +1,142 @@
+---
+layout: default
+title: Spectral-Risk Safe Reinforcement Learning with Convergence Guarantees
+nav_order: 2412
+parent: Home
+---
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Spectral-Risk Safe Reinforcement Learning with Convergence Guarantees">
+  <meta name="keywords" content="Reinforcement Learning, RL, Spectral Risk, Safe RL, Constrained RL, Risk-Constrained RL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spectral-Risk Safe Reinforcement Learning with Convergence Guarantees</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">Spectral-Risk Safe Reinforcement Learning with Convergence Guarantees</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://dobro12.github.io">Dohyeong Kim</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Taehyun Cho<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Seungyub Han<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Hojun Chung<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/railab/professor">Kyungjae Lee</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Seoul National University,</span>
+            <span class="author-block"><sup>2</sup>Korea University</span>
+          </div>
+          <div class="is-size-6 publication-venues" style="color: #1ABC9C ">
+            <span><b>NeurIPS 2024</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The field of risk-constrained reinforcement learning (RCRL) has been developed to effectively reduce the likelihood of worst-case scenarios by explicitly handling risk-measure-based constraints. However, the nonlinearity of risk measures makes it challenging to achieve convergence and optimality. To overcome the difficulties posed by the nonlinearity, we propose a spectral risk measure-constrained RL algorithm, spectral-risk-constrained policy optimization (SRCPO), a bilevel optimization approach that utilizes the duality of spectral risk measures. In the bilevel optimization structure, the outer problem involves optimizing dual variables derived from the risk measures, while the inner problem involves finding an optimal policy given these dual variables. The proposed method, to the best of our knowledge, is the first to guarantee convergence to an optimum in the tabular setting. Furthermore, the proposed method has been evaluated on continuous control tasks and showed the best performance among other RCRL algorithms satisfying the constraints. Our code is available at https://github.com/rllab-snu/Spectral-Risk-Constrained-RL.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+  kim2024srcpo,
+  title={Spectral-Risk Safe Reinforcement Learning with Convergence Guarantees},
+  author={Dohyeong Kim, Taehyun Cho, Seungyub Han, Hojun Chung, Kyungjae Lee, Songhwai Oh},
+  booktitle={Thirty-eighth Conference on Neural Information Processing Systems},
+  year={2024},
+  url={https://openreview.net/forum?id=9JFSJitKC0}  
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
