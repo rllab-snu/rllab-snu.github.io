@@ -1,0 +1,136 @@
+---
+layout: default
+title: Conflict-Averse Gradient Aggregation for Constrained Multi-Objective Reinforcement Learning
+nav_order: 2504
+parent: Home
+---
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Conflict-Averse Gradient Aggregation for Constrained Multi-Objective Reinforcement Learning">
+  <meta name="keywords" content="Reinforcement Learning, RL, Safe RL, Constrained RL, Multi-Objective RL, Constrained Multi-Objective RL, Gradient Aggregation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conflict-Averse Gradient Aggregation for Constrained Multi-Objective Reinforcement Learning</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">Conflict-Averse Gradient Aggregation for Constrained Multi-Objective Reinforcement Learning</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://dobro12.github.io">Dohyeong Kim</a>,
+            </span>
+            <span class="author-block">
+              Mineui Hong,
+            </span>
+            <span class="author-block">
+              Jeongho Park,
+            </span>
+            <span class="author-block">
+              <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Seoul National University</span>
+          </div>
+          <div class="is-size-6 publication-venues" style="color: #1ABC9C ">
+            <span><b>ICLR 2025</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In real-world applications, a reinforcement learning (RL) agent should consider multiple objectives and adhere to safety guidelines. To address these considerations, we propose a constrained multi-objective RL algorithm named constrained multi-objective gradient aggregator (CoMOGA). In the field of multi-objective optimization, managing conflicts between the gradients of the multiple objectives is crucial to prevent policies from converging to local optima. It is also essential to efficiently handle safety constraints for stable training and constraint satisfaction. We address these challenges straightforwardly by treating the maximization of multiple objectives as a constrained optimization problem (COP), where the constraints are defined to improve the original objectives. Existing safety constraints are then integrated into the COP, and the policy is updated by solving the COP, which ensures the avoidance of gradient conflicts. Despite its simplicity, CoMOGA guarantees convergence to global optima in a tabular setting. Through various experiments, we have confirmed that preventing gradient conflicts is critical, and the proposed method achieves constraint satisfaction across all tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+  kim2025comoga,
+  title={Conflict-Averse Gradient Aggregation for Constrained Multi-Objective Reinforcement Learning},
+  author={Dohyeong Kim, Mineui Hong, Jeongho Park, Songhwai Oh},
+  booktitle={Proceedings of The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=ogXkmugNZw}  
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
