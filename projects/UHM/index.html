@@ -1,0 +1,234 @@
+---
+layout: default
+title: Offline Reinforcement Learning with Universal Horizon Models
+nav_order: 2607
+parent: Home
+---
+
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Offline Reinforcement Learning with Universal Horizon Models">
+  <meta name="keywords" content="offline reinforcement learning, model-based reinforcement learning, world models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline Reinforcement Learning with Universal Horizon Models</title>
+
+<!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBLEPL8HN9"></script>-->
+<!--<script>-->
+<!--  window.dataLayer = window.dataLayer || [];-->
+<!--  function gtag(){dataLayer.push(arguments);}-->
+<!--  gtag('js', new Date());-->
+
+<!--  gtag('config', 'G-YBLEPL8HN9');-->
+<!--</script>-->
+
+<!--  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">-->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Offline Reinforcement Learning with Universal Horizon Models</h1>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://hojunian.github.io/">Hojun Chung*</a>,</span>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/junseo-lee/junseo-lee"> Junseo Lee* </a>,</span>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/songhwai-oh"> Songhwai Oh </a></span>
+          </div>
+          <div class="is-size-5 publication-venue">
+            <span class="publication-venue"> <a href="https://rllab.snu.ac.kr" style="color:black">RLLAB, Seoul National University</a></span>
+          </div>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-6 publication-venues">
+            <span style="font-size:15pt;color: #1ABC9C "><b>ICML 2026</b></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <span class="button is-normal is-rounded is-light is-static" aria-disabled="true">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon)</span>
+                </span>
+              </span>
+              <span class="link-block">
+                <span class="button is-normal is-rounded is-light is-static" aria-disabled="true">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Video</h2>
+      <div class="content">
+        <p>Video coming soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container is-max-desktop">
+  <div class='id-centered has-text-centered is-four-fifths'>
+    <section class="section" id="abstract">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+        Model-based reinforcement learning (RL) offers a compelling approach to offline RL by enabling value learning on imagined on-policy trajectories. 
+        However, it often suffers from compounding errors due to repeated model inference on self-generated states.
+        While geometric horizon models (GHM) alleviate this issue through direct prediction over a discounted infinite-horizon future, they remain challenged in accurately modeling distant future states. 
+        To this end, we introduce universal horizon models (UHM), a generalization of GHM that directly predicts future states under arbitrary horizons. 
+        Leveraging this flexibility, we propose a scalable value learning method that employs a winsorized horizon distribution to stabilize training by capping excessively large horizons. 
+        Experimental results on 100 challenging OGBench tasks demonstrate that the proposed method outperforms competitive baselines, particularly on tasks with highly sub-optimal datasets and those requiring long-horizon reasoning.
+        </p>
+      </div>
+    </section>
+    <section class="section" id="Universal Horizon Models">
+      <h2 class="title is-3">Universal Horizon Models</h2>
+      <img src="./static/images/uhm.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        Universal horizon model (UHM) is a future predictive model that directly samples states from the \(n\)-step future state distribution of the policy for any given horizon \(n\).
+        Since it allows \(n\) to be sampled from arbitrary distributions, UHM can be seen as a general framework that includes single-step models and geometric horizon models.
+        UHM can be learned from off-policy transitions via bootstrapping analogous to the learning objective of geometric horizon models:
+        </p>
+      </div>
+      <img src="./static/images/uhm_learning.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        We follow <a href="https://arxiv.org/abs/2503.09817" target="_blank" rel="noopener noreferrer">temporal difference flow</a> to train the flow network for generative modeling.
+        </p>
+      </div>
+    </section>
+    <section class="section" id="Value Learning with UHM">
+      <h2 class="title is-3">Value Learning with UHM</h2>
+      <div class="content has-text-justified">
+        <p>
+        Based on the flexibility of UHM to represent and sample from arbitrary future distributions, we propose a generalized temporal difference learning framework.
+        </p>
+      </div>
+      <img src="./static/images/nu_bellman.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        It recovers standard critic updates as special cases: choosing \(\nu(k)=\gamma^{n-1}\mathbf{1}[k=n]\) yields \(n\)-step TD, while choosing \(\nu(k)=(1-\lambda)(\lambda\gamma)^{k-1}\) represents TD(\(\lambda\)).
+        UHM allows one-sample estimation of the \(\nu\)-Bellman backup target \(\mathcal{T}^\nu Q(s,a)\) for any sub-probability measure \(\nu\).
+        </p>
+      </div>
+      <img src="./static/images/value_target.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        Among many possible choices of \(\nu\), we present a value learning method using the winsorized geometric measure.
+        </p>
+      </div>
+      <img src="./static/images/winsor_weights.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        It stabilizes the learning process of model and value by capping excessively large horizons.
+        </p>
+      </div>
+    </section>
+    <section class="section" id="Experiments">
+      <h2 class="title is-3">Experiments</h2>
+      <h3 class="title is-4">Performance</h3>
+      <img src="./static/images/result_table.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        Our experimental results reveal three key findings. 
+        First, horizon reduction plays a crucial role in effective value learning. 
+        Second, model-based value expansion without repeated inference scales well to noisy tasks and long-horizon reasoning tasks. 
+        Finally, the proposed method shows competitive performance across the task categories we consider, with a 14\% higher average success rate than the second-best method.
+        </p>
+      </div>
+      <h3 class="title is-4">Wall-Clock Time Comparison</h3>
+      <img src="./static/images/wall_clock.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        UHM (and GHM) significantly reduce the computational overhead of model-based approaches by directly predicting future states.
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+  chung2026uhm,
+  title={Offline Reinforcement Learning with universal Horizon Models},
+  author={Hojun Chung, Junseo Lee, Songhwai Oh},
+  booktitle={Proceedings of the International Conference on Machine Learning},
+  year={2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
