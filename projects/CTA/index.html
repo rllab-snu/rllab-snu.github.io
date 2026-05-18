@@ -1,0 +1,189 @@
+---
+layout: default
+title: Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning
+nav_order: 2608
+parent: Home
+---
+
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning">
+  <meta name="keywords" content="goal-conditioned reinforcement learning, offline reinforcement learning, compositional transduction, latent analogies">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning</title>
+
+<!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBLEPL8HN9"></script>-->
+<!--<script>-->
+<!--  window.dataLayer = window.dataLayer || [];-->
+<!--  function gtag(){dataLayer.push(arguments);}-->
+<!--  gtag('js', new Date());-->
+
+<!--  gtag('config', 'G-YBLEPL8HN9');-->
+<!--</script>-->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning</h1>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://1kjs.github.io/">Junseok Kim</a>,</span>
+            <span class="author-block"> <a href="https://dobro12.github.io/"> Dohyeong Kim</a>,</span>
+            <span class="author-block"> <a href="https://www.ri.cmu.edu/ri-people/mineui-hong/"> Mineui Hong</a>,</span>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/songhwai-oh"> Songhwai Oh </a></span>
+          </div>
+          <div class="is-size-5 publication-venue">
+            <span class="publication-venue"> <a href="https://rllab.snu.ac.kr" style="color:#505050">RLLAB, Seoul National University</a></span>
+          </div>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-6 publication-venues">
+            <span style="font-size:15pt;color: #1ABC9C "><b>ICML 2026 (accepted)</b></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <span class="button is-normal is-rounded is-light is-static" aria-disabled="true">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon)</span>
+                </span>
+              </span>
+              <span class="link-block">
+                <!-- <a href="https://github.com/rllab-snu/CTA" -->
+                <a 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soom)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Video</h2>
+      <div class="content">
+        <p>Video coming soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container is-max-desktop">
+  <div class='id-centered has-text-centered is-four-fifths'>
+    <section class="section" id="abstract">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+        In offline goal-conditioned reinforcement learning (GCRL), where one relies on a limited reward-free dataset to learn a generalist goal-reaching agent, compositional generalization becomes essential for reaching unseen goals under novel contextual variations.
+        Most prior approaches pursue this via trajectory stitching over temporally contiguous segments, which limits composing behaviors across varying contexts.
+         To overcome this limitation, we formalize analogy transduction as composing task-endogenous analogies with task-exogenous contexts and propose a novel analogy representation tailored for it.
+        Grounded in our theory, this analogy representation captures what changes under optimal task execution, remains invariant to contextual variations, and is sufficient for optimal goal-reaching. 
+        We further contend that generalization to unseen analogy-context pairs is a practical obstacle in analogy transduction, and introduce a new approach for offline GCRL that enables analogy transduction beyond seen pairs to unseen combinations.
+        We empirically demonstrate the effectiveness of our approach on OGBench manipulation environments, substantially outperforming prior methods that do not perform analogy transduction.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="Distance Difference Fields as Analogies">
+      <h2 class="title is-3">Distance Difference fields as Analogies</h2>
+      <img class="project-image" src="./static/images/CTA_thumbnail.jpg"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        </p>
+      </div>
+
+    </section>
+
+    <section class="section" id="Experiments">
+      <h2 class="title is-3">Experiments</h2>
+      <img class="project-image" src="./static/images/table1.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+        </p>
+      </div>
+
+    </section>
+  </div>
+</div>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+  kim2026compositional,
+  title={Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning},
+  author={Junseok Kim, Dohyeong Kim, Mineui Hong, Songhwai Oh},
+  booktitle={Proc. of the International Conference on Machine Learning (ICML)},
+  year={2026},
+  month={Jul.},
+  address={Seoul, South Korea}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
