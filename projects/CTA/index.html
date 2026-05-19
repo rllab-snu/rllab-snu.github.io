@@ -62,13 +62,15 @@ parent: Home
           <div style="line-height:50%;"> <br> </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://1kjs.github.io/">Junseok Kim</a>,</span>
-            <span class="author-block"> <a href="https://dobro12.github.io/"> Dohyeong Kim</a>,</span>
-            <span class="author-block"> <a href="https://www.ri.cmu.edu/ri-people/mineui-hong/"> Mineui Hong</a>,</span>
-            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/songhwai-oh"> Songhwai Oh </a></span>
+              <a href="https://1kjs.github.io/">Junseok Kim</a><sup>1</sup>,</span>
+            <span class="author-block"> <a href="https://dobro12.github.io/"> Dohyeong Kim</a><sup>2</sup>,</span>
+            <span class="author-block"> <a href="https://www.ri.cmu.edu/ri-people/mineui-hong/"> Mineui Hong</a><sup>3</sup>,</span>
+            <span class="author-block"> <a href="https://rllab.snu.ac.kr/people/songhwai-oh"> Songhwai Oh </a><sup>1</sup></span>
           </div>
           <div class="is-size-5 publication-venue">
-            <span class="publication-venue"> <a href="https://rllab.snu.ac.kr" style="color:#505050">RLLAB, Seoul National University</a></span>
+            <span class="publication-venue"><sup>1</sup> <a href="https://rllab.snu.ac.kr" style="color:#505050">RLLAB, Seoul National University,</a></span>
+            <span class="publication-venue"><sup>2</sup> <span style="color:#505050">Independent Researcher,</span></span>
+            <span class="publication-venue"><sup>3</sup> <span style="color:#505050">Carnegie Mellon University</span></span>
           </div>
           <div style="line-height:50%;"> <br> </div>
           <div class="is-size-6 publication-venues">
@@ -118,13 +120,7 @@ parent: Home
       <h2 class="title is-3">Abstract</h2>
       <div class="content has-text-justified">
         <p>
-        In offline goal-conditioned reinforcement learning (GCRL), where one relies on a limited reward-free dataset to learn a generalist goal-reaching agent, compositional generalization becomes essential for reaching unseen goals under novel contextual variations.
-        Most prior approaches pursue this via trajectory stitching over temporally contiguous segments, which limits composing behaviors across varying contexts.
-         To overcome this limitation, we formalize analogy transduction as composing task-endogenous analogies with task-exogenous contexts and propose a novel analogy representation tailored for it.
-        Grounded in our theory, this analogy representation captures what changes under optimal task execution, remains invariant to contextual variations, and is sufficient for optimal goal-reaching. 
-        We further contend that generalization to unseen analogy-context pairs is a practical obstacle in analogy transduction, and introduce a new approach for offline GCRL that enables analogy transduction beyond seen pairs to unseen combinations.
-        We empirically demonstrate the effectiveness of our approach on OGBench manipulation environments, substantially outperforming prior methods that do not perform analogy transduction.
-        </p>
+        Compositional generalization is essential for reaching unseen goals under novel contextual variations in offline goal-conditioned reinforcement learning (GCRL), where a generalist goal-reaching agent must be learned from limited data. Most prior approaches pursue this via trajectory stitching over temporally contiguous segments, which limits composing behaviors across varying contexts. To overcome this limitation, we formalize analogy transduction as synthesizing new plans by composing task-endogenous analogies with given contexts and propose a novel analogy representation tailored for it. Grounded in our theory, this analogy representation captures what changes under optimal task execution, remains invariant to contextual variations, and is sufficient for optimal goal reaching. We further contend that generalization to unseen analogy-context pairs is a practical obstacle in analogy transduction, and introduce a new approach for offline GCRL that enables analogy transduction beyond seen pairs to unseen combinations. We empirically demonstrate the effectiveness of our approach on OGBench manipulation environments, substantially outperforming prior methods that do not perform analogy transduction.
       </div>
     </section>
 
