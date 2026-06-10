@@ -135,7 +135,7 @@ parent: Home
       <img class="project-image project-image-70" src="./static/images/motivation.png"></img>
       <br>
       <div class="content has-text-justified">
-        <p class="text-center-italic">
+        <p>
           Can robots reuse past behaviors across contexts to solve the same task in a new situation?
         </p>
       </div>
@@ -151,13 +151,13 @@ parent: Home
         </p>
       <br>
       <img class="project-image" src="./static/images/analogy_transduction.png"></img>
-      <br><br>
+      <br>
       <div class="content has-text-justified">
         <p>
           For example, the dataset may not contain any demonstration of opening the drawer when the window is closed and unlocked. However, the agent can extract the analogy for opening the drawer from demonstrations in other contexts, and apply it to the current context, where the window is closed and unlocked.
         </p>
         <p>
-          With analogy transduction, can we learn a generalist goal-reaching agent with strong compositional generalization by composing diverse task-endogenous analogies and contexts?
+          With analogy transduction, our goal is to learn a generalist goal-reaching agent with strong compositional generalization by composing diverse task-endogenous analogies and contexts.
         </p>
       </div>
     </section>
@@ -182,9 +182,9 @@ parent: Home
 
     <section class="section" id="Distance Difference Fields as Analogies">
       <h2 class="title is-3">Distance Difference fields as Analogies</h2>
-      <div class="text-center-italic">
+      <div class="has-text-centered">
         <p>
-          <span style="color: #E75DAE;"><i>Key insight #1</i>:</span> <b>Given an optimal temporal distance \(d^*(s, g)\), a metric space \((\mathcal{S}, d^*)\), which we call <i>temporal distance geometry</i>, is invariant to variation in the task-exogenous components.</b>
+          <span style="color: #E75DAE;"><i>Key insight #1</i>:</span> Given an optimal temporal distance \(d^*(s, g)\), a metric space \((\mathcal{S}, d^*)\), which we call <i>temporal distance geometry</i>, is invariant to variation in the task-exogenous components.
         </p>
       </div>
       <br>
@@ -201,16 +201,16 @@ parent: Home
       <br>
       <br>
       <br>
-      <div class="text-center-italic">
+      <div class="has-text-centered">
         <p>
-          <span style="color: #E75DAE;"><i>Key insight #2</i>:</span> <b>A distance difference field \(\alpha(s,g):\mathcal{S}\to\mathbb{R}\), where
-            \(\alpha(s,g)(x) = d^*(x, g) - d^*(x, s) \ \forall x\in\mathcal{S}\), captures the state-goal displacement in a sufficiently informative manner, which is known to identify each point \(x\).</b>
+          <span style="color: #E75DAE;"><i>Key insight #2</i>:</span> A distance difference field \(\alpha(s,g):\mathcal{S}\to\mathbb{R}\), where
+            \(\alpha(s,g)(x) = d^*(x, g) - d^*(x, s) \ \forall x\in\mathcal{S}\), captures the state-goal displacement in a sufficiently informative manner, which is known to identify each point \(x\).
         </p>
       </div>
       <br>
       <div class="content has-text-justified">
         <p>
-          Motivated by the prior work [1] in differential geometry, we propose to use the distance difference field \(\alpha(s, g)\) as the task-endogenous analogy representation. 
+          Motivated by the prior work <a href="#ref-1">[1]</a> in differential geometry, we propose to use the distance difference field \(\alpha(s, g)\) as the task-endogenous analogy representation. 
           In our paper, we formalize the two forementioned conditions and define the task endogenous analogy.
           Our main proposition establishes that, under a few acceptable assumptions, temporal distance difference field is a valid task endogenous analogy.
           You can find the detailed theoretical analysis in our <a href="#paper-button-link">paper</a>.
@@ -236,7 +236,7 @@ parent: Home
           \[
               \mathcal{L}(Q)=\mathbb{E}_{(s,a,s',g)}\big[ ( Q(s,a,g) \!+ \mathbf{1}_{\{s\neq g\}}\!-\!\gamma \bar \phi(s')^\top \bar\varphi(g))^2 \big]
           \]
-          Then, motivated by prior work [2], we use \(\alpha^\vee(s,g):=\varphi(g)-\varphi(s)\) as a practical surrogate of the distance difference field \(\alpha(s,g)\), since it contains the distance relations with all the other \(x\).
+          Then, motivated by prior work <a href="#ref-2">[2]</a>, we use \(\alpha^\vee(s,g):=\varphi(g)-\varphi(s)\) as a practical surrogate of the distance difference field \(\alpha(s,g)\), since it contains the distance relations with all the other \(x\).
           \[
             \begin{aligned}
               \alpha(s,g)(x) &= d^*(x,g)-d^*(x,s) \\
@@ -261,16 +261,16 @@ parent: Home
           <b>What if the agent has never performed the corresponding task in the given context?</b>
         </p>
       </div>
-      <div class="text-center-italic">
+      <div class="has-text-centered">
         <p>
-          <span style="color: #E75DAE;"><i>Key insight #3</i>:</span> <b>Goal-reaching can be interpreted as an out-of-combination (OOC) extrapolation.</b>
+          <span style="color: #E75DAE;"><i>Key insight #3</i>:</span> Goal-reaching can be interpreted as an out-of-combination (OOC) extrapolation.
         </p>
       </div>
       <br>
       <div class="content has-text-justified">
         <p>
           We tackle with this problem as an out-of-combination extrapolation, so that we could reach the goal by transplanting task-endogenous analogies to the given context, which are never observed together.
-          In this context, we propose <b>C</b>ompositional <b>T</b>ransduction with latent <b>A</b>nalogies (<b>CTA</b>), an effective agent for the analogy transduction that combines our insight with bilinear transduction [3].
+          In this context, we propose <b>C</b>ompositional <b>T</b>ransduction with latent <b>A</b>nalogies (<b>CTA</b>), an effective agent for the analogy transduction that combines our insight with bilinear transduction <a href="#ref-3">[3]</a>.
           Specifically, we parameterize goal-conditioned value function and hierarchical policy mean with bilinear transduction,
           \[
             V(s,g)\;=\;\Omega_1(s) \boldsymbol{\cdot} \Omega_2(\alpha^\vee(s,g)),
@@ -281,7 +281,7 @@ parent: Home
               \mu_\ell(s,\alpha^\vee(s,g))&=\omega_{\ell1}(s) \boldsymbol{\cdot} \omega_{\ell2}(\alpha^\vee(s,g)),
           \end{aligned}
           \]
-          and train each of them following HIQL [4]. This enables estimating values and extracting actions to out-of-combination analogy-context pairs via extrapolation with bilinear transduction.
+          and train each of them following HIQL <a href="#ref-4">[4]</a>. This enables estimating values and extracting actions to out-of-combination analogy-context pairs via extrapolation.
         </p>
       </div>
     </section>
@@ -296,7 +296,7 @@ parent: Home
       <div class="content has-text-justified">
         <p>
             CTA achieves the best or near-best results on six of the eight tasks and improves the overall average performance by about 42% over the strongest baseline.
-            The symbol superscript \(\vee\) denotes a variant that incorporates the dual goal representation [2] into the original algorithm.
+            The symbol superscript \(\vee\) denotes a variant that incorporates the dual goal representation <a href="#ref-2">[2]</a> into the original algorithm.
             In particular, the results in the last three columns suggest that the generalization performance of CTA comes not from the dual goal representation itself, but from analogy transduction.
             Remarkably, the gains are most pronounced on puzzle environments, where the exponentially large state space makes compositional generalization critical.
         </p>
@@ -322,9 +322,7 @@ parent: Home
       CTA achieves the highest direct success and success rates in both environments, suggesting that baselines often prefer indirect in-distribution executions, whereas CTA directly solves unseen context–task combinations more reliably through analogy transduction.
         </p>
       </div>
-      <video class="project-image" preload="auto" autoplay muted loop playsinline controls>
-        <source src="./static/images/OOC_video.mp4" type="video/mp4">
-      </video>
+      <img class="project-image" src="./static/images/OOC_video.gif" alt="OOC extrapolation visualization"></img>
       <br><br>
       
       <h3 class="title is-4">
@@ -339,26 +337,78 @@ parent: Home
       <br>
       <img class="project-image project-image-70" src="./static/images/tsne.png"></img>
       <br>
-      <h3 class="title is-4">Additional visualization of the dual analogies</h3>
-      <div class="analogy-toggle-list" aria-label="More visualization toggles">
-        <div class="analogy-toggle-item">
-          <label class="analogy-toggle-label" for="scene-play-v0-toggle">
-            <span class="analogy-toggle-name">scene-play-v0</span>
-            <input class="analogy-toggle-input" id="scene-play-v0-toggle" type="checkbox" data-target="scene-play-v0-panel">
-            <span class="analogy-toggle-caret" aria-hidden="true"></span>
-          </label>
-          <div class="analogy-visualization-panel" id="scene-play-v0-panel" hidden>
-            <img class="project-image project-image-70" src="./static/images/tsne.png" alt="scene-play-v0 analogy visualization"></img>
+      <h3 class="title is-4">
+        <label class="additional-visualization-toggle" for="additional-visualizations-toggle">
+          <span>Additional visualization of the dual analogies</span>
+          <input class="additional-visualization-toggle-input" id="additional-visualizations-toggle" type="checkbox" data-target="additional-visualizations-panel" checked>
+          <span class="additional-visualization-toggle-caret" aria-hidden="true"></span>
+        </label>
+      </h3>
+      <div class="additional-visualizations-panel" id="additional-visualizations-panel">
+        <div class="additional-visualizations-grid">
+          <div class="query-visualization-card" data-query-visualization="scene">
+            <h4 class="query-visualization-title">scene-play-v0</h4>
+            <div class="query-visualization-nav">
+              <button class="query-visualization-arrow" type="button" data-direction="prev" aria-label="Previous scene-play-v0 query">&#8249;</button>
+              <span class="query-visualization-query-label">Query <span class="query-visualization-query-index">1</span></span>
+              <button class="query-visualization-arrow" type="button" data-direction="next" aria-label="Next scene-play-v0 query">&#8250;</button>
+            </div>
+            <div class="query-visualization-slide" data-query-index="0">
+              <p class="query-visualization-meta-title">Held out task-context pair</p>
+              <p class="query-visualization-description"><span class="query-visualization-label">Task:</span> open drawer<br><span class="query-visualization-label">Context:</span> window=closed, unlocked, drawer=closed</p>
+              <p class="query-visualization-subtitle">Query state-goal pair</p>
+              <img class="query-visualization-image" src="./static/images/scene_query1.jpg" alt="scene-play-v0 query 1 state goal pair"></img>
+              <p class="query-visualization-subtitle">Top 10 nearest analogies</p>
+              <img class="query-visualization-image" src="./static/images/scene_nearest1.jpg" alt="scene-play-v0 query 1 Top 10 nearest analogies"></img>
+            </div>
+            <div class="query-visualization-slide" data-query-index="1" hidden>
+              <p class="query-visualization-meta-title">Held out task-context pair</p>
+              <p class="query-visualization-description"><span class="query-visualization-label">Task:</span> close window<br><span class="query-visualization-label">Context:</span> drawer=closed, locked, window=open</p>
+              <p class="query-visualization-subtitle">Query state-goal pair</p>
+              <img class="query-visualization-image" src="./static/images/scene_query2.jpg" alt="scene-play-v0 query 2 state goal pair"></img>
+              <p class="query-visualization-subtitle">Top 10 nearest analogies</p>
+              <img class="query-visualization-image" src="./static/images/scene_nearest2.jpg" alt="scene-play-v0 query 2 Top 10 nearest analogies"></img>
+            </div>
+            <div class="query-visualization-slide" data-query-index="2" hidden>
+              <p class="query-visualization-meta-title">Held out task-context pair</p>
+              <p class="query-visualization-description"><span class="query-visualization-label">Task:</span> put the cube into the drawer<br><span class="query-visualization-label">Context:</span> window=open, locked, drawer=open, cube=not in drawer</p>
+              <p class="query-visualization-subtitle">Query state-goal pair</p>
+              <img class="query-visualization-image" src="./static/images/scene_query3.jpg" alt="scene-play-v0 query 3 state goal pair"></img>
+              <p class="query-visualization-subtitle">Top 10 nearest analogies</p>
+              <img class="query-visualization-image" src="./static/images/scene_nearest3.jpg" alt="scene-play-v0 query 3 Top 10 nearest analogies"></img>
+            </div>
           </div>
-        </div>
-        <div class="analogy-toggle-item">
-          <label class="analogy-toggle-label" for="puzzle-4x4-play-v0-toggle">
-            <span class="analogy-toggle-name">puzzle-4x4-play-v0</span>
-            <input class="analogy-toggle-input" id="puzzle-4x4-play-v0-toggle" type="checkbox" data-target="puzzle-4x4-play-v0-panel">
-            <span class="analogy-toggle-caret" aria-hidden="true"></span>
-          </label>
-          <div class="analogy-visualization-panel" id="puzzle-4x4-play-v0-panel" hidden>
-            <img class="project-image project-image-70" src="./static/images/tsne.png" alt="puzzle-4x4-play-v0 analogy visualization"></img>
+          <div class="query-visualization-card" data-query-visualization="puzzle">
+            <h4 class="query-visualization-title">puzzle-4x4-play-v0</h4>
+            <div class="query-visualization-nav">
+              <button class="query-visualization-arrow" type="button" data-direction="prev" aria-label="Previous puzzle-4x4-play-v0 query">&#8249;</button>
+              <span class="query-visualization-query-label">Query <span class="query-visualization-query-index">1</span></span>
+              <button class="query-visualization-arrow" type="button" data-direction="next" aria-label="Next puzzle-4x4-play-v0 query">&#8250;</button>
+            </div>
+            <div class="query-visualization-slide" data-query-index="0">
+              <p class="query-visualization-meta-title">Held out task-context pair</p>
+              <p class="query-visualization-description"><span class="query-visualization-label">Task:</span> press button5<br><span class="query-visualization-label">Context:</span> button5=0, button1=1, button9=0, button4=1, button6=0</p>
+              <p class="query-visualization-subtitle">Query state-goal pair</p>
+              <img class="query-visualization-image" src="./static/images/puzzle_query1.jpg" alt="puzzle-4x4-play-v0 query 1 state goal pair"></img>
+              <p class="query-visualization-subtitle">Top 10 nearest analogies</p>
+              <img class="query-visualization-image" src="./static/images/puzzle_nearest1.jpg" alt="puzzle-4x4-play-v0 query 1 Top 10 nearest analogies"></img>
+            </div>
+            <div class="query-visualization-slide" data-query-index="1" hidden>
+              <p class="query-visualization-meta-title">Held out task-context pair</p>
+              <p class="query-visualization-description"><span class="query-visualization-label">Task:</span> press button15<br><span class="query-visualization-label">Context:</span> button15=0, button11=1, button14=1</p>
+              <p class="query-visualization-subtitle">Query state-goal pair</p>
+              <img class="query-visualization-image" src="./static/images/puzzle_query2.jpg" alt="puzzle-4x4-play-v0 query 2 state goal pair"></img>
+              <p class="query-visualization-subtitle">Top 10 nearest analogies</p>
+              <img class="query-visualization-image" src="./static/images/puzzle_nearest2.jpg" alt="puzzle-4x4-play-v0 query 2 Top 10 nearest analogies"></img>
+            </div>
+            <div class="query-visualization-slide" data-query-index="2" hidden>
+              <p class="query-visualization-meta-title">Held out task-context pair</p>
+              <p class="query-visualization-description"><span class="query-visualization-label">Task:</span> press button0<br><span class="query-visualization-label">Context:</span> button0=1, button1=0, button4=1</p>
+              <p class="query-visualization-subtitle">Query state-goal pair</p>
+              <img class="query-visualization-image" src="./static/images/puzzle_query3.jpg" alt="puzzle-4x4-play-v0 query 3 state goal pair"></img>
+              <p class="query-visualization-subtitle">Top 10 nearest analogies</p>
+              <img class="query-visualization-image" src="./static/images/puzzle_nearest3.jpg" alt="puzzle-4x4-play-v0 query 3 Top 10 nearest analogies"></img>
+            </div>
           </div>
         </div>
       </div>
@@ -371,11 +421,11 @@ parent: Home
 
     <section class="section" id="References">
       <h2 class="title is-3">References</h2>
-      <div class="content has-text-justified">
-          [1] S. Ivanov, "Distance difference representations of Riemannian manifolds", Geometriae Dedicata, 2020. <br>
-          [2] S. Park et al., “Dual Goal Representations”, in ICLR, 2026. <br>
-          [3] A. Netanyahu et al., “Learning to Extrapolate: A Transductive Approach”, in ICLR, 2023. <br>
-          [4] S. Park et al., “HIQL: Offline Goal-Conditioned RL with Latent States as Actions”, in NeurIPS, 2023. <br>
+      <div class="content has-text-justified references-text">
+          <span id="ref-1">[1] S. Ivanov, "Distance difference representations of Riemannian manifolds", Geometriae Dedicata, 2020.</span> <br>
+          <span id="ref-2">[2] S. Park et al., “Dual Goal Representations”, in ICLR, 2026.</span> <br>
+          <span id="ref-3">[3] A. Netanyahu et al., “Learning to Extrapolate: A Transductive Approach”, in ICLR, 2023.</span> <br>
+          <span id="ref-4">[4] S. Park et al., “HIQL: Offline Goal-Conditioned RL with Latent States as Actions”, in NeurIPS, 2023.</span> <br>
       </div>
     </section> 
 

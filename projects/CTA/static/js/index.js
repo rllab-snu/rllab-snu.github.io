@@ -75,14 +75,43 @@ $(document).ready(function() {
 
     // bulmaSlider.attach();
 
-    $(".analogy-toggle-input").on("change", function() {
+    $(".additional-visualization-toggle-input").on("change", function() {
       var targetId = $(this).data("target");
       $("#" + targetId).attr("hidden", !this.checked);
     });
 
-    $(".analogy-toggle-input").each(function() {
+    $(".additional-visualization-toggle-input").each(function() {
       var targetId = $(this).data("target");
       $("#" + targetId).attr("hidden", !this.checked);
+    });
+
+    $(".query-visualization-card").each(function() {
+      var card = $(this);
+      var slides = card.find(".query-visualization-slide");
+      var queryIndexLabel = card.find(".query-visualization-query-index");
+      var currentIndex = 0;
+
+      function renderQuery(index) {
+        slides.attr("hidden", true);
+        $(slides.get(index)).removeAttr("hidden");
+        queryIndexLabel.text(index + 1);
+        currentIndex = index;
+      }
+
+      card.find(".query-visualization-arrow").on("click", function() {
+        var direction = $(this).data("direction");
+        var nextIndex = currentIndex;
+
+        if (direction === "next") {
+          nextIndex = (currentIndex + 1) % slides.length;
+        } else {
+          nextIndex = (currentIndex - 1 + slides.length) % slides.length;
+        }
+
+        renderQuery(nextIndex);
+      });
+
+      renderQuery(0);
     });
 
 })
