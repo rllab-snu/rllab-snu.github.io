@@ -26,6 +26,126 @@
   text-decoration:none;
   color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
 
+.custom-home-carousel {
+  position: relative;
+  width: 80%;
+  margin: 1rem auto 1.25rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.custom-home-carousel-track {
+  display: flex;
+  width: 700%;
+  height: 100%;
+  animation: custom-home-carousel-slide 24s infinite;
+}
+
+.custom-home-carousel-image {
+  flex: 0 0 calc(100% / 7);
+  width: calc(100% / 7);
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes custom-home-carousel-slide {
+  0%,
+  12.5% {
+    transform: translateX(0);
+  }
+
+  16.6667%,
+  29.1667% {
+    transform: translateX(-14.2857%);
+  }
+
+  33.3333%,
+  45.8333% {
+    transform: translateX(-28.5714%);
+  }
+
+  50%,
+  62.5% {
+    transform: translateX(-42.8571%);
+  }
+
+  66.6667%,
+  79.1667% {
+    transform: translateX(-57.1428%);
+  }
+
+  83.3333%,
+  95.8333% {
+    transform: translateX(-71.4285%);
+  }
+
+  100% {
+    transform: translateX(-85.7142%);
+  }
+}
+
+@media (max-width: 499px) {
+  .custom-home-carousel {
+    width: 88%;
+  }
+}
+
+.custom-home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.custom-home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.custom-home-button svg {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+}
+
+.custom-home-button-light {
+  background-color: #f5f5f5;
+  border-color: #dbdbdb;
+  color: #363636 !important;
+}
+
+.custom-home-button-light:hover,
+.custom-home-button-light:focus {
+  background-color: #ededed;
+  border-color: #cfcfcf;
+  color: #1f1f1f !important;
+}
+
+.custom-home-button-dark {
+  background-color: #363636;
+  border-color: #363636;
+  color: #ffffff !important;
+}
+
+.custom-home-button-dark:hover,
+.custom-home-button-dark:focus {
+  background-color: #2b2b2b;
+  border-color: #2b2b2b;
+  color: #ffffff !important;
+}
+
 //.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
 //.w3-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
 //.w3-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
@@ -54,7 +174,3 @@
 //  background:gray;
 //  width: 70%;
 //}
-
-
-
-
