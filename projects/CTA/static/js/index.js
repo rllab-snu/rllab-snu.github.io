@@ -75,4 +75,14 @@ $(document).ready(function() {
 
     // bulmaSlider.attach();
 
+    $(".analogy-toggle-input").on("change", function() {
+      var targetId = $(this).data("target");
+      $("#" + targetId).attr("hidden", !this.checked);
+    });
+
+    $(".analogy-toggle-input").each(function() {
+      var targetId = $(this).data("target");
+      $("#" + targetId).attr("hidden", !this.checked);
+    });
+
 })

@@ -74,12 +74,12 @@ parent: Home
           </div>
           <div style="line-height:50%;"> <br> </div>
           <div class="is-size-6 publication-venues">
-            <span style="font-size:15pt;color: #1ABC9C "><b>ICML 2026 (accepted)</b></span>
+            <span style="font-size:15pt;color: #1ABC9C "><b>ICML 2026</b></span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-light" href="https://arxiv.org/pdf/2605.20609">
+                <a id="paper-button-link" class="external-link button is-normal is-rounded is-light" href="https://arxiv.org/pdf/2605.20609">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -109,7 +109,7 @@ parent: Home
     <div class="column is-four-fifths">
       <h2 class="title is-3">Video</h2>
       <div class="publication-video">
-        <iframe src='https://youtu.be/MiPL_k6CDIc?si=fTNelR4-Bm_ES-QA' frameborder='0' allowfullscreen></iframe>
+        <iframe src='https://www.youtube.com/embed/MiPL_k6CDIc' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -121,37 +121,265 @@ parent: Home
       <div class="content has-text-justified">
         <p>
         Compositional generalization is essential for reaching unseen goals under novel contextual variations in offline goal-conditioned reinforcement learning (GCRL), where a generalist goal-reaching agent must be learned from limited data. Most prior approaches pursue this via trajectory stitching over temporally contiguous segments, which limits composing behaviors across varying contexts. To overcome this limitation, we formalize analogy transduction as synthesizing new plans by composing task-endogenous analogies with given contexts and propose a novel analogy representation tailored for it. Grounded in our theory, this analogy representation captures what changes under optimal task execution, remains invariant to contextual variations, and is sufficient for optimal goal reaching. We further contend that generalization to unseen analogy-context pairs is a practical obstacle in analogy transduction, and introduce a new approach for offline GCRL that enables analogy transduction beyond seen pairs to unseen combinations. We empirically demonstrate the effectiveness of our approach on OGBench manipulation environments, substantially outperforming prior methods that do not perform analogy transduction.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="Motivation">
+      <h2 class="title is-3">Motivation</h2>
+      <div class="content has-text-justified">
+        <p>
+          Humans can easily reuse the same behavior across changed context. For example, we can open drawer easiliy when the drawer is open, even if we only have the experiences of opening drawer when the window is closed.
+        </p>
+      </div>
+      <img class="project-image project-image-70" src="./static/images/motivation.png"></img>
+      <br>
+      <div class="content has-text-justified">
+        <p class="text-center-italic">
+          Can robots reuse past behaviors across contexts to solve the same task in a new situation?
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="Analogy Transduction">
+      <h2 class="title is-3">Analogy Transduction</h2>
+        <p class="content has-text-justified">
+          We first introduce a new concept <i>analogy transduction</i>, which we define as below:
+        </p>
+        <p class="text-center-italic">
+          Analogy transduction: Synthesizing a trajectory by transplanting task-endogenous analogies across contexts.
+        </p>
+      <br>
+      <img class="project-image" src="./static/images/analogy_transduction.png"></img>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+          For example, the dataset may not contain any demonstration of opening the drawer when the window is closed and unlocked. However, the agent can extract the analogy for opening the drawer from demonstrations in other contexts, and apply it to the current context, where the window is closed and unlocked.
+        </p>
+        <p>
+          With analogy transduction, can we learn a generalist goal-reaching agent with strong compositional generalization by composing diverse task-endogenous analogies and contexts?
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="Which properties should the task-endogenous analogy have?">
+      <h2 class="title is-3">Which properties should the task-endogenous analogy have?</h2>
+      <div class="content has-text-justified">
+        <p>
+        We contend that the task-endogenous analogy should have the following properties:
+        </p>
+        <ol class="plain-numbered-list">
+          <li>It should be invariant to variations in task-endogenous components.</li>
+          <li>It should encode the task-endogenous state-goal displacement in a sufficiently informative manner.</li>
+        </ol>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          What would be an effective analogy representation that satisfies these conditions?
+        </p>
       </div>
     </section>
 
     <section class="section" id="Distance Difference Fields as Analogies">
       <h2 class="title is-3">Distance Difference fields as Analogies</h2>
-      <img class="project-image" src="./static/images/CTA_thumbnail.jpg"></img>
-      <br><br>
-      <div class="content has-text-justified">
+      <div class="text-center-italic">
         <p>
+          <span style="color: #E75DAE;"><i>Key insight #1</i>:</span> <b>Given an optimal temporal distance \(d^*(s, g)\), a metric space \((\mathcal{S}, d^*)\), which we call <i>temporal distance geometry</i>, is invariant to variation in the task-exogenous components.</b>
         </p>
       </div>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+          Here, even if the window state differs across state goal pairs, if the robot and drawer states, which are endogenous components of the task defined by the given state goal pair, are the same, then they share the same task endogenous latent state. This forms a representation that is invariant to the task exogenous context.
+        </p>
+        <p>
+          However, single temporal distance \(d^*(s, g)\) degenerates, since there exist lots of state-goal pairs with same temporal distance.
+        </p>
+      </div>
+      <br>
+      <img class="project-image" src="./static/images/CTA_thumbnail.jpg"></img>
+      <br>
+      <br>
+      <br>
+      <div class="text-center-italic">
+        <p>
+          <span style="color: #E75DAE;"><i>Key insight #2</i>:</span> <b>A distance difference field \(\alpha(s,g):\mathcal{S}\to\mathbb{R}\), where
+            \(\alpha(s,g)(x) = d^*(x, g) - d^*(x, s) \ \forall x\in\mathcal{S}\), captures the state-goal displacement in a sufficiently informative manner, which is known to identify each point \(x\).</b>
+        </p>
+      </div>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+          Motivated by the prior work [1] in differential geometry, we propose to use the distance difference field \(\alpha(s, g)\) as the task-endogenous analogy representation. 
+          In our paper, we formalize the two forementioned conditions and define the task endogenous analogy.
+          Our main proposition establishes that, under a few acceptable assumptions, temporal distance difference field is a valid task endogenous analogy.
+          You can find the detailed theoretical analysis in our <a href="#paper-button-link">paper</a>.
+        </p>
+      </div>
+      <br>
+      <img class="project-image" src="./static/images/proposition.png"></img>
+      <br>
+    </section>
 
+     <section class="section" id="Practical Instantiation of Analogies">
+      <h2 class="title is-3">Practical Instantiation of Analogies</h2>
+      <div class="content has-text-justified">
+        <p>
+          To represent the distance difference field with continuous state spaces, we first parameterize the temporal distance in a bilinear form
+          \[
+              d^*(s, g) = \phi(s)^\top\varphi(g),
+          \]
+          and train each encoders \(\phi\) and \(\varphi\) with IQL objectives with modified reward \(r(s,g)=\mathbf{1}\{s \neq g\}\).
+          \[
+              \mathcal{L}(\phi,\varphi)=\mathbb{E}_{(s,a,g)}\big[ \ell^\iota_2( \phi(s)^\top\varphi(g)\!-\!\bar Q(s,a,g)) \big]
+          \]
+          \[
+              \mathcal{L}(Q)=\mathbb{E}_{(s,a,s',g)}\big[ ( Q(s,a,g) \!+ \mathbf{1}_{\{s\neq g\}}\!-\!\gamma \bar \phi(s')^\top \bar\varphi(g))^2 \big]
+          \]
+          Then, motivated by prior work [2], we use \(\alpha^\vee(s,g):=\varphi(g)-\varphi(s)\) as a practical surrogate of the distance difference field \(\alpha(s,g)\), since it contains the distance relations with all the other \(x\).
+          \[
+            \begin{aligned}
+              \alpha(s,g)(x) &= d^*(x,g)-d^*(x,s) \\
+              &= \phi(x)^\top\varphi(g) - \phi(x)^\top\varphi(s) \\
+              &= \phi(x)^\top(\varphi(g) - \varphi(s)).
+            \end{aligned}
+          \]
+          We refer to \(\alpha^\vee(s,g):=\varphi(g)-\varphi(s)\) as the <i><b>dual analogy</b></i>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="Compositional Transduction with Analogies">
+      <h2 class="title is-3">Compositional Transduction with Analogies</h2>
+        <p class="content has-text-justified">
+          Recall that the analogy transduction refers to the synthesis of goal-reaching behavior by transplanting task-endogenous analogies across contexts.
+        </p>
+      <img class="project-image project-image-70" src="./static/images/ooc_introduce.png"></img>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+          <b>What if the agent has never performed the corresponding task in the given context?</b>
+        </p>
+      </div>
+      <div class="text-center-italic">
+        <p>
+          <span style="color: #E75DAE;"><i>Key insight #3</i>:</span> <b>Goal-reaching can be interpreted as an out-of-combination (OOC) extrapolation.</b>
+        </p>
+      </div>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+          We tackle with this problem as an out-of-combination extrapolation, so that we could reach the goal by transplanting task-endogenous analogies to the given context, which are never observed together.
+          In this context, we propose <b>C</b>ompositional <b>T</b>ransduction with latent <b>A</b>nalogies (<b>CTA</b>), an effective agent for the analogy transduction that combines our insight with bilinear transduction [3].
+          Specifically, we parameterize goal-conditioned value function and hierarchical policy mean with bilinear transduction,
+          \[
+            V(s,g)\;=\;\Omega_1(s) \boldsymbol{\cdot} \Omega_2(\alpha^\vee(s,g)),
+          \]
+          \[
+          \begin{aligned}
+              \mu_h(s,\alpha^\vee(s,g))&=\omega_{h1}(s) \boldsymbol{\cdot}  \omega_{h2}(\alpha^\vee(s,g)),\label{eq:bilinear-policy-h} \\
+              \mu_\ell(s,\alpha^\vee(s,g))&=\omega_{\ell1}(s) \boldsymbol{\cdot} \omega_{\ell2}(\alpha^\vee(s,g)),
+          \end{aligned}
+          \]
+          and train each of them following HIQL [4]. This enables estimating values and extracting actions to out-of-combination analogy-context pairs via extrapolation with bilinear transduction.
+        </p>
+      </div>
     </section>
 
     <section class="section" id="Experiments">
       <h2 class="title is-3">Experiments</h2>
+      <h3 class="title is-4">
+          <span style="color: #73D5D2;"><i>Experiment #1</i>:</span> Does CTA with dual analogies achieve competitive generalization performance?
+      </h3> 
       <img class="project-image" src="./static/images/table1.png"></img>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+            CTA achieves the best or near-best results on six of the eight tasks and improves the overall average performance by about 42% over the strongest baseline.
+            The symbol superscript \(\vee\) denotes a variant that incorporates the dual goal representation [2] into the original algorithm.
+            In particular, the results in the last three columns suggest that the generalization performance of CTA comes not from the dual goal representation itself, but from analogy transduction.
+            Remarkably, the gains are most pronounced on puzzle environments, where the exponentially large state space makes compositional generalization critical.
+        </p>
+      </div>
       <br><br>
-      <img class="project-image project-image-70" src="./static/images/ooc_fig.png"></img>
-      <br><br>
+      
+      <h3 class="title is-4">
+          <span style="color: #73D5D2;"><i>Experiment #2</i>:</span> Are CTA’s compositional generalization gains genuinely driven by OOC extrapolation?
+      </h3>
+      <div class="content has-text-justified">
+        <p>
+            To test whether CTA indeed extrapolates to OOC context–task pairs, we construct direct OOC case studies on scene
+            and puzzle-4x4 by holding out three context-task pairs for scene and five for puzzle-4x4 pairs from training and evaluating them at inference. 
+            For example, one held-out scene pair requires opening the drawer when the window is closed and unlocked and the drawer is closed. Since the goal can still be
+            achieved through an indirect in-distribution sequence.
+            We report a direct success rate, which counts only trajectories that solve the intended held-out task directly. 
+        </p>
+      </div>
+      <img class="project-image" src="./static/images/ooc_case_study.png"></img>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+      CTA achieves the highest direct success and success rates in both environments, suggesting that baselines often prefer indirect in-distribution executions, whereas CTA directly solves unseen context–task combinations more reliably through analogy transduction.
+        </p>
+      </div>
       <video class="project-image" preload="auto" autoplay muted loop playsinline controls>
         <source src="./static/images/OOC_video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
+      <br><br>
+      
+      <h3 class="title is-4">
+          <span style="color: #73D5D2;"><i>Experiment #3</i>:</span> Do our dual analogies indeed capture task-endogenous displacements?
+      </h3>
+      <div class="content has-text-justified">
+        <p>
+            To qualitatively verify that the dual analogies capture task-endogenous displacements, we sample 20,000 state-goal pairs \((s, g)\) from the re-collected validation split of scene-play and visualize dual analogies \(\alpha^\vee(s, g)\) using a 2D t-SNE projection.
+            We can see that similar task analogies lie close to one another in the latent space, so we conclude the dual analogy indeed capture task-endogenous displacements.
+        </p>
+      </div>
+      <br>
+      <img class="project-image project-image-70" src="./static/images/tsne.png"></img>
+      <br>
+      <h3 class="title is-4">Additional visualization of the dual analogies</h3>
+      <div class="analogy-toggle-list" aria-label="More visualization toggles">
+        <div class="analogy-toggle-item">
+          <label class="analogy-toggle-label" for="scene-play-v0-toggle">
+            <span class="analogy-toggle-name">scene-play-v0</span>
+            <input class="analogy-toggle-input" id="scene-play-v0-toggle" type="checkbox" data-target="scene-play-v0-panel">
+            <span class="analogy-toggle-caret" aria-hidden="true"></span>
+          </label>
+          <div class="analogy-visualization-panel" id="scene-play-v0-panel" hidden>
+            <img class="project-image project-image-70" src="./static/images/tsne.png" alt="scene-play-v0 analogy visualization"></img>
+          </div>
+        </div>
+        <div class="analogy-toggle-item">
+          <label class="analogy-toggle-label" for="puzzle-4x4-play-v0-toggle">
+            <span class="analogy-toggle-name">puzzle-4x4-play-v0</span>
+            <input class="analogy-toggle-input" id="puzzle-4x4-play-v0-toggle" type="checkbox" data-target="puzzle-4x4-play-v0-panel">
+            <span class="analogy-toggle-caret" aria-hidden="true"></span>
+          </label>
+          <div class="analogy-visualization-panel" id="puzzle-4x4-play-v0-panel" hidden>
+            <img class="project-image project-image-70" src="./static/images/tsne.png" alt="puzzle-4x4-play-v0 analogy visualization"></img>
+          </div>
+        </div>
+      </div>
       <br><br>
       <div class="content has-text-justified">
         <p>
         </p>
       </div>
-
     </section>
+
+    <section class="section" id="References">
+      <h2 class="title is-3">References</h2>
+      <div class="content has-text-justified">
+          [1] S. Ivanov, "Distance difference representations of Riemannian manifolds", Geometriae Dedicata, 2020. <br>
+          [2] S. Park et al., “Dual Goal Representations”, in ICLR, 2026. <br>
+          [3] A. Netanyahu et al., “Learning to Extrapolate: A Transductive Approach”, in ICLR, 2023. <br>
+          [4] S. Park et al., “HIQL: Offline Goal-Conditioned RL with Latent States as Actions”, in NeurIPS, 2023. <br>
+      </div>
+    </section> 
+
+
   </div>
 </div>
 
