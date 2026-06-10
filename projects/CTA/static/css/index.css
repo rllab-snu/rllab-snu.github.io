@@ -123,6 +123,16 @@ body {
   margin: 0 auto;
 }
 
+.project-image-70 {
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .project-image-70 {
+    width: 100%;
+  }
+}
+
 .section:not(#abstract) > .title,
 .section:not(#abstract) .container > .title {
   text-align: left;
