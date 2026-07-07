@@ -1,0 +1,571 @@
+---
+layout: default
+title: "Memory-Efficient Voxelized Renderable Neural 3D Spatial Representation for Vision-Based Robotics"
+nav_order: 2601
+parent: Home
+---
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Memory-Efficient Voxelized Renderable Neural 3D Spatial Representation for Vision-Based Robotics">
+  <meta name="keywords" content="3D Gaussian Splatting, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory-Efficient Voxelized Renderable Neural 3D Spatial Representation for Vision-Based Robotics</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+
+</head>
+
+<body>
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Memory-Efficient Voxelized Renderable Neural 3D Spatial
+              Representation for Vision-Based Robotics
+            </h1>
+            <h3 class="title is-4 conference-authors"><a target="_blank" href="">RA-L 2026</a></h3>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://howoongjun.github.io/">Howoong Jun</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://riboha.github.io/">Seongbo Ha</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://rllab.snu.ac.kr/people/jaewon-lee/jaewon-lee">Jaewon Lee</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://bogus2000.github.io/">Hyeonwoo Yu</a><sup>2</sup>, and</span>
+              <span class="author-block">
+                <a href="https://rllab.snu.ac.kr/people/songhwai-oh">Songhwai Oh</a><sup>1</sup>,</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Seoul National University</span>
+              <span class="author-block"><sup>2</sup>Sungkyunkwan University</span>
+              <!-- <span class="author-block"><sup>*</sup>denotes equal contribution</span> -->
+            </div>
+            <!-- TODO: update paper and video link once upload -->
+            <div class="column has-text-centered">
+              <!-- <div class="publication-links"> -->
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/11242030"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.11700"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://youtu.be/kTzwtivYqSc?si=S5oaytwCqoFYhUaz"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/rllab-snu/3DSR" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class=" carousel results-carousel">
+          <div class="item item-room">
+            <video poster="" id="room" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/room_video_comp3.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+  
+          <div class="item item-garden">
+            <video poster="" id="garden" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/garden_video_comp3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-bicycle">
+            <video poster="" id="bicycle" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/bicycle_video_comp3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-bonsai">
+            <video poster="" id="bonsai" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/bonsai_video_comp3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-counter">
+            <video poster="" id="counter" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/counter_video_comp3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-kitchen">
+            <video poster="" id="kitchen" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/kitchen_video_comp3.mp4" type="video/mp4">
+            </video>
+          </div>
+        <div class="item item-train">
+          <video poster="" id="train" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/train_video_comp3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-struck">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/truck_video_comp3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-stump">
+          <video poster="" id="stump" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/stump_video_comp3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+        <p>The caption displays both the file size and the Structural Similarity Index (SSIM)</p>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Overview</h2>
+          <div class="content has-text-justified">
+            <div class="publication-video">
+              <iframe id="overview-video" src="https://www.youtube.com/embed/kTzwtivYqSc?si=S5oaytwCqoFYhUaz&mute=1&enablejsapi=1" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p>
+              <br>
+              In this paper, we introduce a novel approach for modeling a memory-efficient spatial representation with
+              3D Gaussian splatting.
+              The proposed method, named <span style="color: #e89292;font-weight: bolder;"> 3DSR</span>, is an efficient
+              voxelized renderable neural 3D spatial representation that utilizes 3D Gaussian splatting.
+              3DSR leverages the strengths of both voxelization (memory efficiency) and 3D Gaussian splatting
+              (high-quality image reconstruction).
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/470hul75bSM?si=7F9NL8zWbU9GtqHb"
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+           encrypted-media; " allowfullscreen></iframe>
+           
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title">Method Overview</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/method.png">
+            <p><br><strong>Overview of the proposed method.</strong>
+              The primary objective of the 3DSR approach is to produce a memory-efficient 3D Gaussian splatting
+              representation suitable for robotic applications. The method comprises two main steps: base 3D Gaussians
+              creation and image upsampling.
+              We assume that the original dense 3D Gaussian splatting representation is given beforehand. First, the 3D
+              Gaussian splatting-based point clouds are downsampled through voxelization to significantly reduce memory
+              usage.
+              This voxelized representation, referred to as the ‘base 3D Gaussians’, serves as the foundation for
+              rendering coarse images.
+              When a 6-DoF pose is provided, a coarse image is rendered from the base 3D Gaussians.
+              Subsequently, the coarse image is upsampled to its original resolution and quality using an upsampling
+              network, which is trained offline.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Concurrent Work. -->
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container ">
+      <div class=" has-text-centered">
+        <h2 class="title is">Upsampling Comparisons</h2>
+        <div class="content has-text-justified">
+          <p>
+            Rendering novel view images from base 3D Gaussians produces a coarse depiction of the scene, as the base 3D
+            Gaussians lacks detailed 3D Gaussian points necessary for creating high-quality renderings.
+            To address this, we incorporate an upsampling neural network layer to reconstruct the high-quality images.
+            Unlike existing super-resolution methods, which typically target blurred or low-resolution images, our
+            approach focuses on low-quality rendered images that retain coarse detail.
+            To address this, we generate our own dataset consisting of low-quality rendered images from the voxelized
+            base 3D Gaussians Mb and their corresponding high-quality ground-truth images, and train the network
+            specifically for our purpose.
+            As illustrated, the low-quality images exhibit sphere-like renderings due to the coarse representation of
+            the base 3D Gaussians. Additionally, these images are rendered at a low resolution of the ground-truth
+            images.
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <!-- Visual Effects. -->
+          <div class="column">
+            <div class="content">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div id="example1" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/upsampling/upsample1.jpg">
+                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                        After Upsample
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width:96.4968152866242%;">
+                      <div class="bal-before-inset" style="width: 539px;">
+                        <img src="./static/images/upsampling/voxel1.jpg">
+                        <div class="bal-beforePosition beforeLabel">
+                          Before
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left:96.4968152866242%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+
+
+                  <div id="example2" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/upsampling/upsample2.jpg">
+                      <div class="bal-afterPosition afterLabel">
+                        After Upsample
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width: 50%;">
+                      <div class="bal-before-inset" style="width: 539px;">
+                        <img src="./static/images/upsampling/voxel2.jpg">
+                        <div class="bal-beforePosition beforeLabel">
+                          Before
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left: 50%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+
+                <div id="example4" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/upsampling/upsample3.png">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      After Upsample
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:62.10191082802548%;">
+                    <div class="bal-before-inset" style="width: 539px;">
+                      <img src="./static/images/upsampling/voxel3.png">
+                      <div class="bal-beforePosition beforeLabel">
+                        Before
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:62.10191082802548%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+
+                <div id="example5" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="./static/images/upsampling/upsample4.png">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      After Upsample
+                    </div>
+                  </div>
+
+                  <div class="bal-before" style="width:56.77179962894249%;">
+                    <div class="bal-before-inset" style="width: 628px;">
+                      <img src="./static/images/upsampling/voxel4.png">
+                      <div class="bal-beforePosition beforeLabel">
+                        Before
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle" style="left:56.77179962894249%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+    new BeforeAfter({
+      id: '#example1'
+    });
+    new BeforeAfter({
+      id: '#example2'
+    });
+    new BeforeAfter({
+      id: '#example4'
+    });
+    new BeforeAfter({
+      id: '#example5'
+    });
+
+  </script>
+  <!-- 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is">Quantitative Results on Replica Dataset</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/result_table.png">
+            <p><strong>Results on Replica dataset. </strong>
+              The proposed method achieves the lowest memory usage across the dataset while maintaining image rendering
+              quality comparable to existing methods.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Needs update
+          </p>
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{jun20253dsr,
+    author  = {Jun, Howoong and Ha, Seongbo and Lee, Jaewon and Yu, Hyeonwoo and Oh, Songhwai},
+    title   = {Memory Efficient Voxelized Renderable Neural 3D Spatial Representation for Vision-Based Robotics},
+    journal={IEEE Robotics and Automation Letters},
+    year    = {2025},
+    publisher = {IEEE}
+}
+</code></pre>
+    </div>
+  </section>
+
+  <!-- TODO: update the arxiv link and github -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://github.com/gs-slam/gs-slam.github.io">source
+                code</a> of this website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const videoIframe = document.getElementById('overview-video');
+      if (videoIframe) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            } else {
+              videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            }
+          });
+        }, { threshold: 0.5 });
+        observer.observe(videoIframe);
+      }
+    });
+  </script>
+</body>
+
+</html>
