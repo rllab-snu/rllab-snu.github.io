@@ -1,6 +1,6 @@
 ---
 layout: default
-title: LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation
+title: "LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation"
 nav_order: 2608
 parent: Home
 ---
@@ -12,7 +12,7 @@ parent: Home
   <meta charset="utf-8">
   <meta name="description"
         content="LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation">
-  <meta name="keywords" content="goal-conditioned reinforcement learning, offline reinforcement learning, compositional transduction, latent analogies">
+  <meta name="keywords" content="imitation learning, multi-robot systems, dual arm manipulation, multi-arm, transformer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation</title>
 
@@ -121,7 +121,7 @@ parent: Home
       <h2 class="title is-3">Abstract</h2>
       <div class="content has-text-justified">
         <p>
-          Imitation learning has shown strong performance in robotic manipulation. Extending it to multi-arm settings, however, remains challenging because coordination becomes increasingly difficult as the number of arms grows. To address this, we propose the leader-follower transformer (LF-Former), a multi-agent policy architecture that leverages an ordered decision structure for multi-arm coordination. Under a given ordering, agents predict actions sequentially, with each agent conditioned on preceding agents’ action chunks and shared temporal context that summarizes past observations across all agents. LF-Former adaptively integrates these inter-agent signals through a gated group attention mechanism. Furthermore, rather than manually fixing a decision ordering, we formulate ordering selection as a multi-armed bandit problem and identify an effective decision ordering during training. Experiments on simulated and real-world multi-arm manipulation tasks show that LF-Former consistently outperforms decentralized policies and matches or exceeds centralized baselines, especially in tightly coupled coordination scenarios.We further show that bandit-based ordering selection effectively identifies strong decision orderings, often matching or exceeding the best fixed ordering without requiring the oracle choice.
+          Imitation learning has shown strong performance in robotic manipulation. Extending it to multi-arm settings, however, remains challenging because coordination becomes increasingly difficult as the number of arms grows. To address this, we propose the leader-follower transformer (LF-Former), a multi-agent policy architecture that leverages an ordered decision structure for multi-arm coordination. Under a given ordering, agents predict actions sequentially, with each agent conditioned on preceding agents’ action chunks and shared temporal context that summarizes past observations across all agents. LF-Former adaptively integrates these inter-agent signals through a gated group attention mechanism. Furthermore, rather than manually fixing a decision ordering, we formulate ordering selection as a multi-armed bandit problem and identify an effective decision ordering during training. Experiments on simulated and real-world multi-arm manipulation tasks show that LF-Former consistently outperforms decentralized policies and matches or exceeds centralized baselines, especially in tightly coupled coordination scenarios. We further show that bandit-based ordering selection effectively identifies strong decision orderings, often matching or exceeding the best fixed ordering without requiring the oracle choice.
         </p>
       </div>
     </section>
@@ -224,7 +224,7 @@ parent: Home
       year={2026},
       note={Accepted}
     }
-}</code></pre>
+</code></pre>
   </div>
 </section>
 
