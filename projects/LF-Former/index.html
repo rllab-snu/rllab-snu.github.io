@@ -1,0 +1,250 @@
+---
+layout: default
+title: LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation
+nav_order: 2608
+parent: Home
+---
+
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation">
+  <meta name="keywords" content="goal-conditioned reinforcement learning, offline reinforcement learning, compositional transduction, latent analogies">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation</title>
+
+<!--  &lt;!&ndash; Global site tag (gtag.js) - Google Analytics &ndash;&gt;-->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-YBLEPL8HN9"></script>-->
+<!--<script>-->
+<!--  window.dataLayer = window.dataLayer || [];-->
+<!--  function gtag(){dataLayer.push(arguments);}-->
+<!--  gtag('js', new Date());-->
+
+<!--  gtag('config', 'G-YBLEPL8HN9');-->
+<!--</script>-->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation</h1>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Jeongho Park,</span>
+            Hyeondal Son,</span>
+            Hyeokjin Kwon,</span>
+            Geunje Cheon,</span>
+            Jooyoung Kim,</span>
+            Minjae Kang,</span>
+            and Songhwai Oh</span>
+          </div>
+          <div class="is-size-5 publication-venue">
+            <span class="publication-venue"><a href="https://rllab.snu.ac.kr" style="color:#505050">RLLAB, Seoul National University</a></span>
+          </div>
+          <div style="line-height:50%;"> <br> </div>
+          <div class="is-size-6 publication-venues">
+            <span style="font-size:15pt;color: #1ABC9C "><b>RA-L 2026</b></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a id="paper-button-link" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/rllab-snu/LF-Former"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <iframe src='https://www.youtube.com/embed/YSgy01iAzVU' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container is-max-desktop">
+  <div class='id-centered has-text-centered is-four-fifths'>
+    <section class="section" id="abstract">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Imitation learning has shown strong performance in robotic manipulation. Extending it to multi-arm settings, however, remains challenging because coordination becomes increasingly difficult as the number of arms grows. To address this, we propose the leader-follower transformer (LF-Former), a multi-agent policy architecture that leverages an ordered decision structure for multi-arm coordination. Under a given ordering, agents predict actions sequentially, with each agent conditioned on preceding agents’ action chunks and shared temporal context that summarizes past observations across all agents. LF-Former adaptively integrates these inter-agent signals through a gated group attention mechanism. Furthermore, rather than manually fixing a decision ordering, we formulate ordering selection as a multi-armed bandit problem and identify an effective decision ordering during training. Experiments on simulated and real-world multi-arm manipulation tasks show that LF-Former consistently outperforms decentralized policies and matches or exceeds centralized baselines, especially in tightly coupled coordination scenarios.We further show that bandit-based ordering selection effectively identifies strong decision orderings, often matching or exceeding the best fixed ordering without requiring the oracle choice.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="Method Overview">
+      <h2 class="title is-3">Method Overview</h2>
+      <div class="content has-text-justified">
+        <p>
+          Instead of predicting the actions of multiple robot arms independently, LF-Former introduces an ordered decision structure that explicitly captures inter-agent dependencies. Given a decision ordering, an agent predicts its action chunk while conditioning on the action chunks of the agents preceding it in the sequence. This allows later agents to make their decisions with knowledge of what earlier agents intend to do, providing a structured way to coordinate tightly coupled multi-arm behaviors.
+        </p>
+      </div>
+      <img class="project-image project-image-90" src="./static/images/overview_b_cropped.png"></img>
+      <br>
+      <!-- <div class="content has-text-justified">
+        <p>
+          Can robots reuse past behaviors across contexts to solve the same task in a new situation?
+        </p>
+      </div> -->
+    </section>
+
+    <section class="section" id="Network Architecture">
+      <h2 class="title is-3">Network Architecture</h2>
+        <p class="content has-text-justified">
+          LF-Former consists of three main modules: a perception module that encodes local observations, an alignment module that integrates inter-agent information, and a decoder that predicts future action chunks.
+        </p>
+      <br>
+      <img class="project-image" src="./static/images/modules_cropped.png"></img>
+      <br>
+      <div class="content has-text-justified">
+        <p>
+          However, not all inter-agent information is equally useful at every moment. LF-Former therefore uses gated group attention to selectively integrate the preceding agents' action chunks together with temporal context, which summarizes past observations across agents. The policy can adaptively determine how much it should rely on each source of inter-agent information according to the current situation.
+        </p>
+        <!-- <p>
+          With analogy transduction, our goal is to learn a generalist goal-reaching agent with strong compositional generalization by composing diverse task-endogenous analogies and contexts.
+        </p> -->
+      </div>
+    </section>
+
+    <section class="section" id="Ordering Selection using Multi-Armed Bandit">
+      <h2 class="title is-3">Ordering Selection using Multi-Armed Bandit</h2>
+      <div class="content has-text-justified">
+        <p>
+          The choice of decision ordering can significantly affect coordination performance. Rather than manually fixing an ordering, LF-Former treats each candidate ordering as an arm in a multi-armed bandit and uses imitation-loss feedback during training to identify an effective ordering. To account for the continuously changing policy during training, we use a discounted Thompson-sampling-based procedure that places greater emphasis on recent ordering performance.
+        </p>
+        <br>
+        <!-- <img class="project-image project-image-70" src="./static/images/bandit.png"></img> -->
+        <img src="./static/images/bandit.png" style="width: 60%; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <br>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          To stabilize ordering selection, training proceeds through warm-up, search, and exploitation phases, gradually transitioning from exploration to a fixed ordering.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="Simulation Examples">
+      <h2 class="title is-3">Simulation Examples</h2>
+      <div class="content has-text-justified">
+        <p>
+          We provide qualitative rollouts of LF-Former across five simulated multi-arm manipulation tasks involving two to four robot arms. These examples cover diverse coordination challenges, including synchronized manipulation, handover, sequential interaction, and collision-aware multi-arm control.
+        </p>
+      </div>
+      <div class="video-container">
+        <video autoplay loop muted playsinline
+               style="width: 100%; display: block; margin: 0 auto;">
+               <source src="./static/images/vid_sim_crop.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </section>
+
+     <section class="section" id="Real Robot Examples">
+      <h2 class="title is-3">Real Robot Examples</h2>
+      <div class="content has-text-justified">
+        <p>
+          We also evaluate LF-Former on two real-world dual-arm manipulation tasks, Banana Handover and Blocks-to-Bins, using two UR5 robot arms. The policies are trained from human teleoperation demonstrations, and the examples below show the resulting coordinated behaviors in the real-world setup.
+        </p>
+      </div>
+      <div class="video-container">
+        <video autoplay loop muted playsinline
+               style="width: 100%; display: block; margin: 0 auto;">
+               <source src="./static/images/vid_real_crop.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+
+
+  </div>
+</div>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2026lfformer,
+      title={LF-Former: A Multi-Agent Policy with Ordered Decision Structures for Multi-Arm Manipulation},
+      author={Park, Jeongho and Son, Hyeondal and Kwon, Hyeokjin and Cheon, Geunje and Kim, Jooyoung and Kang, Minjae and Oh, Songhwai},
+      journal={IEEE Robotics and Automation Letters},
+      year={2026},
+      note={Accepted}
+    }
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a rel="Nerfies" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
