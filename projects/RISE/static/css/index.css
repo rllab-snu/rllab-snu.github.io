@@ -1,0 +1,187 @@
+
+:root {
+  --rise-accent: #6c5ce7;
+  --rise-accent-soft: #f3f0ff;
+  --rise-text: #242424;
+  --rise-muted: #676767;
+  --rise-border: #e7e7e7;
+  --rise-panel: #fafafa;
+}
+
+.rise-page {
+  color: var(--rise-text);
+  font-family: "Noto Sans", "Google Sans", sans-serif;
+}
+
+.rise-page .hero-body {
+  padding-top: 3.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.rise-page .publication-title {
+  font-family: "Google Sans", "Noto Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -0.025em;
+}
+
+.rise-page .publication-authors,
+.rise-page .publication-venue {
+  line-height: 1.65;
+}
+
+.rise-page .author-block a {
+  color: #333;
+}
+
+.rise-page .equal-note {
+  color: var(--rise-muted);
+  margin-top: 0.2rem;
+}
+
+.rise-page .venue-label {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.38rem 0.9rem;
+  border-radius: 999px;
+  background: var(--rise-accent-soft);
+  color: var(--rise-accent);
+  font-weight: 700;
+}
+
+.rise-page .publication-links {
+  margin-top: 0.55rem;
+}
+
+.rise-page .publication-links .button {
+  margin: 0.2rem;
+}
+
+.rise-page .project-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
+.rise-page .section {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+
+.rise-page .section-title {
+  margin-bottom: 1rem;
+}
+
+.rise-page .content p {
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.rise-page .publication-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.09);
+}
+
+.rise-page .publication-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rise-page .figure-wrap {
+  margin: 1.5rem auto 0.5rem;
+  text-align: center;
+}
+
+.rise-page .figure-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.rise-page .caption {
+  max-width: 900px;
+  margin: 0.7rem auto 0;
+  color: var(--rise-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.rise-page .compact-copy {
+  max-width: 900px;
+}
+
+.rise-page .experiment-copy {
+  max-width: 900px;
+  margin-bottom: 1rem;
+}
+
+/* Slots for experiment videos that will be added later. */
+.rise-page .experiment-videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.rise-page .experiment-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111;
+}
+
+.rise-page .experiment-video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.rise-page .bibtex-box pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.rise-page .footer {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .rise-page .publication-title {
+    font-size: 2rem !important;
+  }
+
+  .rise-page .section {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .rise-page .experiment-videos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.rise-page .publication-authors sup,
+.rise-page .publication-affiliations sup {
+  font-size: 0.68em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.rise-page .publication-affiliations {
+  color: var(--rise-muted);
+}

@@ -1,0 +1,239 @@
+---
+layout: default
+title: "RISE: Responsibility-Induced Specialized Experts for Humanoid Loco-Manipulation"
+parent: Home
+nav_order: 2609
+---
+
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="./static/css/index.css">
+
+<div class="rise-page">
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Learning Humanoid Loco-Manipulation with Responsibility-Induced Specialized Experts for Vision-Language-Action Models
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><strong>Hogun Kee*</strong><sup>1</sup>,</span>
+            <span class="author-block"><strong>Wooseok Oh*</strong><sup>2</sup>,</span>
+            <span class="author-block">Jooyoung Kim<sup>2</sup>,</span>
+            <span class="author-block">Jaeyeon Jeong<sup>2</sup>,</span>
+            <span class="author-block">Hyewoo Jung<sup>3</sup>,</span>
+            <span class="author-block">Hyeondal Son<sup>2</sup>,</span>
+            <span class="author-block">Hosung Lee<sup>2</sup>,</span>
+            <span class="author-block">Minjae Kang<sup>2</sup>,</span>
+            <span class="author-block">and Songhwai Oh<sup>2</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-affiliations" style="margin-top:0.55rem; line-height:1.65;">
+            <div><sup>1</sup> NVIDIA Corporation, Seoul, Korea</div>
+            <div>
+              <sup>2</sup>
+              <a href="https://rllab.snu.ac.kr/" style="color:#505050;">
+                Robot Learning Lab (RLLAB), Seoul National University
+              </a>
+            </div>
+            <div><sup>3</sup> Seoul National University</div>
+          </div>
+
+          <div class="equal-note is-size-6" style="margin-top:0.35rem;">
+            <strong>* Equal contribution</strong>
+          </div>
+
+          <div><span class="venue-label">IROS 2026</span></div>
+
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="./static/pdf/RISE_IROS2026.pdf"
+                 class="external-link button is-normal is-rounded is-light">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://www.youtube.com/watch?v=t13_h03ouIQ"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-youtube"></i></span>
+                <span>Video</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1. VIDEO -->
+<section class="section" id="video">
+  <div class="project-container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Video</h2>
+        <div class="publication-video">
+          <iframe
+            src="https://www.youtube.com/embed/t13_h03ouIQ"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. ABSTRACT -->
+<section class="section" id="abstract">
+  <div class="project-container">
+    <h2 class="title is-3 section-title">Abstract</h2>
+    <div class="content has-text-justified compact-copy">
+      <p>
+        We present <strong>Responsibility-Induced Specialized Experts (RISE)</strong>, a multi-expert
+        Vision-Language-Action framework for learning long-horizon humanoid loco-manipulation from segmented
+        locomotion- and manipulation-oriented demonstrations. RISE induces behavior-specialized experts according
+        to how accurately each expert reconstructs the demonstrated action, enabling a single policy to model
+        heterogeneous whole-body behaviors without requiring long-horizon demonstrations containing explicit
+        behavior transitions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. METHOD OVERVIEW -->
+<section class="section" id="method-overview">
+  <div class="project-container">
+    <h2 class="title is-3 section-title">Method Overview</h2>
+    <div class="content has-text-justified compact-copy">
+      <p>
+        RISE uses a shared vision-language backbone with multiple action experts and a meta-controller.
+        Given the visual observation, language instruction, and robot state, the VLA module predicts an upper-body
+        action together with a high-level locomotion command. A pre-trained locomotion policy then produces the
+        corresponding lower-body action for whole-body humanoid control.
+      </p>
+    </div>
+
+    <div class="figure-wrap">
+      <img src="./static/images/overview_final.png" alt="Overview of the RISE framework">
+    </div>
+  </div>
+</section>
+
+<!-- 4. RISE -->
+<section class="section" id="rise">
+  <div class="project-container">
+    <h2 class="title is-3 section-title">RISE</h2>
+    <div class="content has-text-justified compact-copy">
+      <p>
+        During training, RISE assigns each expert a responsibility based on its flow-matching reconstruction error.
+        Experts that better explain a demonstrated action receive larger updates, encouraging specialization into
+        different behavior patterns such as locomotion- and manipulation-dominant motions. The meta-controller learns
+        to predict these expert weights from the shared representation.
+      </p>
+      <p>
+        Because the learned gating weights change with the dominant behavior, they also provide a useful signal for
+        detecting subtask transitions. This lets RISE compose segmented demonstrations into long-horizon
+        loco-manipulation sequences at inference time.
+      </p>
+    </div>
+
+    <div class="figure-wrap">
+      <img src="./static/images/method_final.png"
+           alt="RISE responsibility-based expert training and inference">
+    </div>
+  </div>
+</section>
+
+<!-- 5. SIMULATION -->
+<section class="section" id="simulation">
+  <div class="project-container">
+    <h2 class="title is-3 section-title">Simulation Experiments</h2>
+    <div class="content has-text-justified experiment-copy">
+      <p>
+        We evaluate RISE on compositional humanoid loco-manipulation tasks in simulation, combining segmented
+        locomotion and manipulation behaviors into multi-step move, pick, and place sequences.
+      </p>
+    </div>
+
+    <!--
+      Add simulation rollout videos here later.
+
+      Example:
+      <div class="experiment-videos">
+        <div class="experiment-video">
+          <video autoplay muted loop playsinline>
+            <source src="./static/videos/sim_example_1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="experiment-video">
+          <video autoplay muted loop playsinline>
+            <source src="./static/videos/sim_example_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    -->
+  </div>
+</section>
+
+<!-- 6. REAL WORLD -->
+<section class="section" id="real-world">
+  <div class="project-container">
+    <h2 class="title is-3 section-title">Real-World Experiments</h2>
+    <div class="content has-text-justified experiment-copy">
+      <p>
+        We further evaluate RISE on a real Unitree G1 humanoid, executing long-horizon loco-manipulation sequences
+        that require repeated transitions between whole-body locomotion and dexterous manipulation.
+      </p>
+    </div>
+
+    <!--
+      Add real-world rollout videos here later.
+
+      Example:
+      <div class="experiment-videos">
+        <div class="experiment-video">
+          <video autoplay muted loop playsinline>
+            <source src="./static/videos/real_example_1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="experiment-video">
+          <video autoplay muted loop playsinline>
+            <source src="./static/videos/real_example_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    -->
+  </div>
+</section>
+
+<section class="section" id="bibtex">
+  <div class="project-container content bibtex-box">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre><code>@inproceedings{kee2026rise,
+  title     = {Learning Humanoid Loco-Manipulation with Responsibility-Induced Specialized Experts for Vision-Language-Action Models},
+  author    = {Kee, Hogun and Oh, Wooseok and Kim, Jooyoung and Jeong, Jaeyeon and Jung, Hyewoo and Son, Hyeondal and Lee, Hosung and Kang, Minjae and Oh, Songhwai},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2026},
+  note      = {Accepted}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="project-container">
+    <div class="content has-text-centered">
+      <p>RISE Project Page · IROS 2026</p>
+    </div>
+  </div>
+</footer>
+
+</div>
