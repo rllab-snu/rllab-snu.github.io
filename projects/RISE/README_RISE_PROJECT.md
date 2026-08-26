@@ -71,3 +71,11 @@ Then add your MP4 files there and uncomment/edit the example `<video>` blocks al
 
 - `static/images/overview_final.png` — Method Overview
 - `static/images/method_final.png` — RISE
+
+
+## Visual consistency update
+
+This revision matches the LF-Former page more closely:
+- all author names use the same font weight;
+- `IROS 2026` is shown as simple colored venue text rather than a pill badge;
+- Method Overview / RISE figures have the exact same content width as their paragraphs.

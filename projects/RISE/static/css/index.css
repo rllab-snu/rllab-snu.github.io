@@ -185,3 +185,31 @@
 .rise-page .publication-affiliations {
   color: var(--rise-muted);
 }
+
+
+/* Match LF-Former visual conventions and align text/figures exactly. */
+.rise-page .compact-copy,
+.rise-page .experiment-copy,
+.rise-page .figure-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rise-page .figure-wrap {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.rise-page .figure-wrap img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.rise-page .venue-label {
+  display: none;
+}
