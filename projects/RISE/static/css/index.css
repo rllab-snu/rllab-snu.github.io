@@ -213,3 +213,36 @@
 .rise-page .venue-label {
   display: none;
 }
+
+
+/* Final experiment video layout. */
+.rise-page .experiment-video-single,
+.rise-page .experiment-video-stack {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.25rem;
+}
+
+.rise-page .experiment-video-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rise-page .experiment-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #111;
+}
+
+.rise-page .experiment-video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #111;
+}
