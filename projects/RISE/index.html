@@ -98,20 +98,33 @@ nav_order: 2610
 <!-- 2. ABSTRACT -->
 <section class="section" id="abstract">
   <div class="project-container">
-    <h2 class="title is-3 section-title">Abstract</h2>
+    <h2 class="title is-3 section-title has-text-centered">Abstract</h2>
+
     <div class="content has-text-justified compact-copy">
       <p>
-        We present <strong>Responsibility-Induced Specialized Experts (RISE)</strong>, a multi-expert
-        Vision-Language-Action framework for learning long-horizon humanoid loco-manipulation from segmented
-        locomotion- and manipulation-oriented demonstrations. RISE induces behavior-specialized experts according
-        to how accurately each expert reconstructs the demonstrated action, enabling a single policy to model
-        heterogeneous whole-body behaviors without requiring long-horizon demonstrations containing explicit
-        behavior transitions.
+        In this paper, we present Responsibility-Induced Specialized Experts (RISE),
+        a responsibility-driven multi-expert Vision-Language-Action (VLA) framework
+        that learns long-horizon humanoid loco-manipulation from segmented locomotion
+        and manipulation-oriented demonstrations. Humanoid loco-manipulation remains
+        challenging due to (i) heterogeneous whole-body behaviors with substantially
+        different action distributions and (ii) the difficulty of collecting reliable
+        long-horizon demonstrations that include behavior transitions. RISE addresses
+        these challenges by inducing behavior-specialized experts via
+        responsibility-driven learning, where each expert’s responsibility reflects
+        how well it reconstructs the target action. This mechanism encourages experts
+        to specialize in different behavioral patterns and enables the policy to model
+        heterogeneous action distributions. The resulting expert weighting dynamics
+        allow RISE to coordinate experts over time and infer behavior transitions
+        during execution, enabling long-horizon loco-manipulation despite being trained
+        only on segmented data. We evaluate RISE in simulation and on a real humanoid
+        robot, demonstrating robust loco-manipulation with frequent
+        locomotion–manipulation transitions and improved performance over baselines
+        trained on segmented demonstrations.
       </p>
     </div>
   </div>
 </section>
-
+  
 <!-- 3. METHOD OVERVIEW -->
 <section class="section" id="method-overview">
   <div class="project-container">
